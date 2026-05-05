@@ -497,4 +497,52 @@ body.decade-overview-page .card-grid {
   text-align: left;
 }
 /* DECADE OVERVIEW CENTERING END */
+/* YEAR OVERVIEW CENTERING START */
+body.year-overview-page .page-header {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+body.year-overview-page .top-nav,
+body.year-overview-page .year-return-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center !important;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
+
+body.year-overview-page .year-return-nav {
+  margin-top: 0.7rem;
+  margin-bottom: 1.35rem;
+}
+
+body.year-overview-page .page-title,
+body.year-overview-page .page-header p,
+body.year-overview-page main > p,
+body.year-overview-page .intro,
+body.year-overview-page .intro-text,
+body.year-overview-page .page-intro,
+body.year-overview-page .dek,
+body.year-overview-page .lede {
+  max-width: 920px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+body.year-overview-page .gallery-grid,
+body.year-overview-page .works-grid,
+body.year-overview-page .catalogue-grid,
+body.year-overview-page .card-grid {
+  text-align: left;
+}
+/* YEAR OVERVIEW CENTERING END */
 
