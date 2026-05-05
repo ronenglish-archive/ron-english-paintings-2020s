@@ -545,4 +545,30 @@ body.year-overview-page .card-grid {
   text-align: left;
 }
 /* YEAR OVERVIEW CENTERING END */
+/* YEAR RETURN PILL STYLE START */
+body.year-overview-page .year-return-nav .year-return-pill,
+body.year-overview-page .year-return-nav .nav-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 28px;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #111111;
+  font-size: 0.82rem;
+  line-height: 1;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+body.year-overview-page .year-return-nav .year-return-pill:hover,
+body.year-overview-page .year-return-nav .nav-pill:hover {
+  background: #111111;
+  color: #ffffff;
+  text-decoration: none !important;
+}
+/* YEAR RETURN PILL STYLE END */
 
