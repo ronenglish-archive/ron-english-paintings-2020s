@@ -1,0 +1,23 @@
+Ron English paintings/works-on-paper 2025-2026 audit
+Generated: 2026-05-20 15:21:31
+
+Repo root: D:\github\ron-english-paintings-2020s
+Report folder: D:\github\ron-english-paintings-2020s\data\generated\paintings-2025-2026-audit-20260520-152131
+
+2025 index entries found: 48
+2025 entries with missing detail pages: 0
+2025 entries with missing index images: 0
+Web-Documentation3 image files found: 47
+
+Reports created:
+- readiness-check.csv
+- 2025-index-and-detail-audit.csv
+- web-documentation3-inventory.csv
+- 2026-intake-template.csv
+
+Changes made:
+- Created 2026 index: D:\github\ron-english-paintings-2020s\paintings\2020s\2026\index.html
+- Added 2026 year card to 2020s overview: D:\github\ron-english-paintings-2020s\paintings\2020s.html
+
+Warnings:
+- The scaffold references images/Paintings/2020s/year-2026.jpg, but that file does not exist yet.

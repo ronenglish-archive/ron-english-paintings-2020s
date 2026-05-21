@@ -1,0 +1,26 @@
+﻿Ron English 2026 Delusional Frames build audit
+Generated: 2026-05-20 16:09:25
+
+Repo root: D:\github\ron-english-paintings-2020s
+CSV path: C:\Users\sengl\AppData\Local\Temp\delusional-frames-2026-intake-embedded.csv
+Image folder: D:\github\ron-english-paintings-2020s\images\Paintings\2020s\2026
+Show card folder: D:\github\ron-english-paintings-2020s\images\Paintings\Web-Documentation3
+Show card status: MISSING
+Show card file: 
+Show card message: No show card candidate found. Use -ShowCardFileName.
+
+CSV rows read: 22
+Prepared rows: 22
+Ready rows: 22
+Rows needing review: 0
+Rows with errors: 0
+
+Report CSV: D:\github\ron-english-paintings-2020s\data\generated\build-delusional-frames-2026-pages-v3-20260520-160925\2026-build-audit.csv
+Mode: APPLY
+
+Changes made: yes.
+Detail pages written: 22
+Detail pages skipped because they already existed: 0
+Year index written: D:\github\ron-english-paintings-2020s\paintings\2020s\2026\index.html
+Decade overview checked/updated: D:\github\ron-english-paintings-2020s\paintings\2020s.html
+Backup folder: D:\github-backups\ron-english-paintings-2020s\build-delusional-frames-2026-pages-v3-20260520-160925
