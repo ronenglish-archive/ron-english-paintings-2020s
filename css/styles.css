@@ -572,3 +572,38 @@ body.year-overview-page .year-return-nav .nav-pill:hover {
 }
 /* YEAR RETURN PILL STYLE END */
 
+/* START GENERATED LITERATURE SOURCE IMAGE CSS */
+.literature-source-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  margin: 0.9rem auto 0;
+  box-sizing: border-box;
+}
+
+.literature-source-link {
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.literature-source-link img {
+  display: block;
+  width: min(100%, 150px);
+  max-height: 205px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.literature-source-link:hover img,
+.literature-source-link:focus-visible img {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 24px rgba(0, 0, 0, 0.13);
+}
+/* END GENERATED LITERATURE SOURCE IMAGE CSS */
