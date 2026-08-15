@@ -607,3 +607,61 @@ body.year-overview-page .year-return-nav .nav-pill:hover {
   box-shadow: 0 9px 24px rgba(0, 0, 0, 0.13);
 }
 /* END GENERATED LITERATURE SOURCE IMAGE CSS */
+
+/* START GLOBAL SUPPORTING MEDIA SIZE STANDARD */
+/*
+  Global catalogue supporting-media size standard.
+
+  The visual size is based on the preferred Seven Seas Literature scans:
+  - maximum image height: 260px
+  - maximum image width: 360px
+  - preserve aspect ratio
+  - multiple images remain in one flex row when space permits
+
+  Applies to:
+  - Exhibition/showcard images
+  - Literature images, including book/catalogue covers and article scans
+
+  This changes sizing/layout only. Existing borders, shadows, and other
+  visual treatments remain controlled by their existing rules.
+*/
+html body .work-layout .exhibition-showcards,
+html body .work-layout .literature-source-images {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 0.85rem !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+html body .work-layout .exhibition-showcards > a,
+html body .work-layout .exhibition-showcards > a.exhibition-showcard-link,
+html body .work-layout .literature-source-images > a,
+html body .work-layout .literature-source-images > a.literature-source-link {
+  display: inline-flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  width: auto !important;
+  max-width: 360px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+html body .work-layout .exhibition-showcards > a > img,
+html body .work-layout .exhibition-showcards .exhibition-showcard-link img,
+html body .work-layout .literature-source-images > a > img,
+html body .work-layout .literature-source-images .literature-source-link img {
+  display: block !important;
+  width: auto !important;
+  max-width: min(100%, 360px) !important;
+  max-height: 260px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* END GLOBAL SUPPORTING MEDIA SIZE STANDARD */
