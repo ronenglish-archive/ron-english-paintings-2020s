@@ -749,3 +749,49 @@ html body .work-layout .literature-source-images .literature-source-link img {
   }
 }
 /* END GLOBAL CENTERED WORK SEQUENCE PILL STANDARD */
+
+/* START GENERATED CLICKABLE WORK HERO CSS */
+.work-hero-link {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.work-hero-link .work-hero {
+  display: block;
+  margin: 0 auto !important;
+}
+
+.work-hero-gallery {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+  align-items: start !important;
+  width: 100% !important;
+  max-width: 1040px !important;
+  margin: 0 auto 1.5rem !important;
+}
+
+.work-hero-gallery .work-hero-link {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.work-hero-gallery .work-hero {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .work-hero-gallery {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* END GENERATED CLICKABLE WORK HERO CSS */
