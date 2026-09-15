@@ -4,11 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fish Soup - Ron English Catalogue Raisonne</title>
-
   <meta name="work-id" content="RE-014849" />
-
   <link rel="stylesheet" href="../../../../css/styles.css" />
-
   <style>
     .hero-card {
       margin: 0 0 1.5rem;
@@ -19,164 +16,54 @@
       overflow: hidden;
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
     }
-
-    .hero-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
+    .hero-card img { display:block; width:100%; height:auto; border-radius:10px; }
+    .hero-card .work-hero { margin:0; }
+    .section-block { margin:2rem 0 0; }
+    .section-block h2 { margin:0 0 .75rem; font-size:1.25rem; }
+    .section-block p, .section-block li { line-height:1.6; }
+    .work-meta, .section-block ul { list-style:none; padding-left:0; margin-left:0; }
+    .work-meta li, .section-block li { list-style:none; margin-left:0; }
+    .supplemental-gallery,
+    .section-block .gallery-grid,
+    .section-block .kaiju-gallery,
+    .section-block .image-grid {
+      display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:1rem;
     }
-
-    .hero-card .work-hero {
-      margin: 0;
+    .supplemental-gallery a,
+    .section-block .gallery-item,
+    .section-block .kaiju-gallery a,
+    .section-block .image-card {
+      display:block; flex:0 1 420px; max-width:420px; width:100%; margin:0 auto;
     }
-
-    .section-block {
-      margin: 2rem 0 0;
+    .supplemental-gallery img,
+    .section-block img {
+      display:block; width:auto; height:auto; max-width:100%; max-height:900px;
+      object-fit:contain; margin:0 auto; border-radius:10px;
     }
-
-    .section-block h2 {
-      margin: 0 0 0.75rem;
-      font-size: 1.25rem;
+    .relationship-note, .kaiju-relationship, .relationship {
+      max-width:900px; margin:1rem auto; line-height:1.6;
     }
-
-    .section-block p,
-    .section-block li {
-      line-height: 1.6;
-    }
-
-    .evidence-card {
-      display: grid;
-      grid-template-columns: minmax(180px, 320px) 1fr;
-      gap: 1rem;
-      align-items: start;
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      border-radius: 16px;
-      padding: 0.9rem;
-      background: rgba(255, 255, 255, 0.96);
-      color: #111;
-    }
-
-    .evidence-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      background: #f3f4f6;
-    }
-
-    .evidence-card h3 {
-      margin: 0 0 0.4rem;
-      font-size: 1rem;
-    }
-
-    .evidence-card p {
-      margin: 0;
-    }
-
-    @media (max-width: 760px) {
-      .evidence-card {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .work-meta,
-    .section-block ul {
-      list-style: none;
-      padding-left: 0;
-      margin-left: 0;
-    }
-
-    .work-meta li,
-    .section-block li {
-      list-style: none;
-      margin-left: 0;
-    }
-
-    .work-sequence-nav {
-      display: flex;
-      justify-content: center;
-      margin: 1.05rem auto;
-      padding: 0 1rem;
-    }
-
-    .sequence-nav-inner {
-      display: flex;
-      justify-content: center;
-      gap: 0.65rem;
-      flex-wrap: wrap;
-      max-width: 960px;
-      width: 100%;
-    }
-
-    .sequence-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 2.25rem;
-      text-align: center;
-      line-height: 1.25;
-    }
-
-    @media (max-width: 640px) {
-      .sequence-nav-inner {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .sequence-pill {
-        width: 100%;
-      }
-    }
+    .text-block, .kaiju-text { max-width:900px; margin:0 auto; line-height:1.65; }
   </style>
   <link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
-<!-- START GENERATED WORK SEQUENCE NAV CSS -->
-<style>
-  .work-sequence-nav {
-    display: flex;
-    justify-content: center;
-    margin: 1.05rem auto;
-    padding: 0 1rem;
-  }
-  .sequence-nav-inner {
-    display: flex;
-    justify-content: center;
-    gap: 0.65rem;
-    flex-wrap: wrap;
-    max-width: 960px;
-    width: 100%;
-  }
-  .sequence-pill {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 2.25rem;
-    text-align: center;
-    line-height: 1.25;
-  }
-  .sequence-disabled {
-    opacity: 0.42;
-    cursor: default;
-  }
-  @media (max-width: 640px) {
-    .sequence-nav-inner {
-      flex-direction: column;
-      align-items: stretch;
+  <!-- START GENERATED WORK SEQUENCE NAV CSS -->
+  <style>
+    .work-sequence-nav { display:flex; justify-content:center; margin:1.05rem auto; padding:0 1rem; }
+    .sequence-nav-inner { display:flex; justify-content:center; gap:.65rem; flex-wrap:wrap; max-width:960px; width:100%; }
+    .sequence-pill { display:inline-flex; align-items:center; justify-content:center; min-height:2.25rem; text-align:center; line-height:1.25; }
+    .sequence-disabled { opacity:.42; cursor:default; }
+    @media(max-width:640px){
+      .sequence-nav-inner{flex-direction:column;align-items:stretch}
+      .sequence-pill{width:100%}
     }
-    .sequence-pill {
-      width: 100%;
-    }
-  }
-</style>
-<!-- END GENERATED WORK SEQUENCE NAV CSS -->
+  </style>
+  <!-- END GENERATED WORK SEQUENCE NAV CSS -->
 </head>
-
 <body>
   <header class="site-header">
     <h1>Fish Soup</h1>
-
     <nav class="top-nav">
-      <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Home</a>
+      <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue home</a>
       <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1970s/paintings/1970s.html">1960s&ndash;1970s</a>
       <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1980s/paintings/1980s.html">1980s</a>
       <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1990s/paintings/1990s.html">1990s</a>
@@ -184,24 +71,16 @@
       <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-paintings-2010s/paintings/2010s.html">2010s</a>
       <a class="nav-pill is-active" href="https://ronenglish-archive.github.io/ron-english-paintings-2020s/paintings/2020s.html">2020s</a>
     </nav>
-
     <nav class="top-nav year-return-nav">
       <a class="nav-pill year-return-pill" href="https://ronenglish-archive.github.io/ron-english-paintings-2020s/paintings/2020s/2025/index.html">&larr; Return to 2025</a>
     </nav>
   </header>
-
   <main class="work-layout">
     <figure class="hero-card">
       <a class="work-hero-link" href="../../../../images/Paintings/2020s/2025/Fish-Soup.jpg" target="_blank" rel="noopener noreferrer">
-        <img
-          src="../../../../images/Paintings/2020s/2025/Fish-Soup.jpg"
-          alt="Fish Soup"
-          class="work-hero"
-          loading="lazy"
-        />
+        <img src="../../../../images/Paintings/2020s/2025/Fish-Soup.jpg" alt="Fish Soup" class="work-hero" loading="lazy" />
       </a>
     </figure>
-
     <ul class="work-meta" data-work-id="RE-014849">
       <li><strong>Title:</strong> Fish Soup</li>
       <li><strong>Date:</strong> 2025</li>
@@ -210,8 +89,7 @@
       <li><strong>Work ID:</strong> RE-014849</li>
       <li><strong>Provenance:</strong> Artist's private collection.</li>
     </ul>
-
-    <section class="section-block">
+<section class="section-block">
       <h2>Ancillary Documentation</h2>
       <div class="evidence-card">
         <a href="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-3/main/sketches/Scan_20250820.jpg?v=20260625e" target="_blank" rel="noopener noreferrer">
@@ -223,18 +101,7 @@
         </div>
       </div>
     </section>
-
-    
-
-  
-<!-- WORK-SEQUENCE-NAV-START -->
-<nav class="work-sequence-nav" aria-label="Artwork sequence navigation">
-  <div class="sequence-nav-inner">
-    <a class="nav-pill sequence-pill prev-work" href="Elefanka.html">&larr; Previous: Elefanka</a>
-    <a class="nav-pill sequence-pill next-work" href="Fishbowl-Astronaut.html">Next: Fishbowl Astronaut &rarr;</a>
-  </div>
-</nav>
-<!-- WORK-SEQUENCE-NAV-END -->
-</main>
+<!-- WORK-SEQUENCE-NAV-START --><nav class="work-sequence-nav" aria-label="Artwork sequence navigation"><div class="sequence-nav-inner"><a class="nav-pill sequence-pill prev-work" href="Elefanka.html">&larr; Previous: Elefanka</a><a class="nav-pill sequence-pill next-work" href="Fishbowl-Astronaut.html">Next: Fishbowl Astronaut &rarr;</a></div></nav><!-- WORK-SEQUENCE-NAV-END -->
+  </main>
 </body>
 </html>
