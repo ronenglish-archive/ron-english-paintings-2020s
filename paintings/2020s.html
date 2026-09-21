@@ -170,7 +170,21 @@
     width: 100% !important;
   }
 </style>
-</head>
+<style id="ron-decade-last-row-centering-v1">
+/* Preserve established 260px year-card size while centering incomplete final rows. */
+.year-grid{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  justify-content:center!important;
+  align-items:stretch!important;
+  gap:18px!important;
+}
+.year-grid > .year-card{
+  flex:0 1 260px!important;
+  width:100%!important;
+  max-width:260px!important;
+}
+</style></head>
 
 <body class="decade-overview-page">
   <div class="page-container">
@@ -192,14 +206,7 @@
       <h1 class="page-title">2020s</h1>
     </header>
 
-    <section class="intro-text" aria-label="2020s decade overview">
-      <p>
-        A chronological index of documented paintings and works on paper currently attributed to the 2020s.
-      </p>
-      <p>
-        This page provides entry points to year-level catalogues for works presently documented within the decade. Years and records reflect the best available documentation at the time of publication, and entries may be added, revised, or reassigned as additional primary sources and verified records emerge.
-      </p>
-    </section>
+    
 
     <main class="gallery-wrap">
 
@@ -275,8 +282,8 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>Ron English Catalogue Raisonné — Paintings &amp; Works on Paper</p>
+        <footer class="site-footer">
+      <p>Published via GitHub Pages for long-term public access.</p>
     </footer>
 
   </div>
