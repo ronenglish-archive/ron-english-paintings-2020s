@@ -27,6 +27,56 @@
     width: 100% !important;
   }
 </style>
+<!-- YEAR-SEQUENCE-NAV-CSS-START -->
+<style id="year-sequence-nav-css-v1">
+  .year-sequence-nav {
+    max-width: 1100px;
+    margin: 34px auto 0;
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+
+  .year-sequence-nav-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .year-sequence-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    padding: 8px 14px;
+    border: 1px solid #d6e1ff;
+    border-radius: 999px;
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .year-sequence-pill:hover,
+  .year-sequence-pill:focus {
+    background: #f3f6ff;
+  }
+
+  @media (max-width: 640px) {
+    .year-sequence-nav-inner {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .year-sequence-pill {
+      width: 100%;
+    }
+  }
+</style>
+<!-- YEAR-SEQUENCE-NAV-CSS-END -->
 </head>
 
 <body class="year-overview-page">
@@ -161,7 +211,16 @@
       </a>
 
     </section>
-  </main>
+  
+<!-- YEAR-SEQUENCE-NAV-START -->
+<nav class="year-sequence-nav" aria-label="Year sequence navigation">
+  <div class="year-sequence-nav-inner">
+        <a class="nav-pill year-sequence-pill prev-year" href="https://ronenglish-archive.github.io/ron-english-paintings-2020s/paintings/2020s/2023/index.html">&larr; Previous: 2023</a>
+        <a class="nav-pill year-sequence-pill next-year" href="https://ronenglish-archive.github.io/ron-english-paintings-2020s/paintings/2020s/2025/index.html">Next: 2025 &rarr;</a>
+  </div>
+</nav>
+<!-- YEAR-SEQUENCE-NAV-END -->
+</main>
 
   <footer class="site-footer">
     <p>Published via GitHub Pages for long-term public access.</p>
