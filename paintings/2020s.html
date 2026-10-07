@@ -186,6 +186,43 @@
 <style>
 .ron-published-footer-center { text-align: center; }
 </style>
+<style id="ron-decade-sequence-nav-v1">
+  .ron-decade-sequence-nav {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto 1.25rem;
+    padding: 0 1rem;
+  }
+
+  .ron-decade-sequence-nav-inner {
+    display: flex;
+    justify-content: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 960px;
+  }
+
+  .ron-decade-sequence-nav .nav-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.25rem;
+    text-align: center;
+    line-height: 1.25;
+  }
+
+  @media (max-width: 640px) {
+    .ron-decade-sequence-nav-inner {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .ron-decade-sequence-nav .nav-pill {
+      width: 100%;
+    }
+  }
+</style>
 </head>
 
 <body class="decade-overview-page">
@@ -284,8 +321,15 @@
 
       </section>
     </main>
+<!-- START DECADE SEQUENCE NAV -->
+<nav class="ron-decade-sequence-nav" aria-label="Decade sequence navigation">
+  <div class="ron-decade-sequence-nav-inner">
+    <a class="nav-pill prev-decade" href="https://ronenglish-archive.github.io/ron-english-paintings-2010s/paintings/2010s.html">&larr; Previous: 2010s</a>
+  </div>
+</nav>
+<!-- END DECADE SEQUENCE NAV -->
 
-        <footer class="site-footer ron-published-footer-center">Published via GitHub Pages<br>for long-term public access.</footer>
+<footer class="site-footer ron-published-footer-center">Published via GitHub Pages<br>for long-term public access.</footer>
 
   </div>
 </body>
