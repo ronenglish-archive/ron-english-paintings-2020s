@@ -228,7 +228,6 @@
     margin: 28px 0 18px;
     text-align: center;
   }
-
   .ron-decade-sequence-nav-inner {
     display: flex;
     justify-content: center;
@@ -236,32 +235,37 @@
     flex-wrap: wrap;
     gap: 10px;
   }
-
-  .ron-decade-sequence-nav .nav-pill {
+  /* RON-DECADE-PILL-FOOTER-COLOR-FIX-20261010 */
+  .ron-decade-sequence-nav .nav-pill,
+  .ron-decade-sequence-nav .nav-pill:link,
+  .ron-decade-sequence-nav .nav-pill:visited {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 8px 14px;
-    border: 1px solid rgba(0,0,0,.18);
+    border: 1px solid #d6e1ff;
     border-radius: 999px;
-    background: #fff;
-    color: inherit;
+    background: #ffffff !important;
+    color: #111111 !important;
     font: 14px/1.2 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     text-decoration: none;
     white-space: nowrap;
   }
-
   .ron-decade-sequence-nav .nav-pill:hover,
   .ron-decade-sequence-nav .nav-pill:focus-visible {
+    background: #f3f6ff !important;
+    color: #111111 !important;
     text-decoration: none;
-    filter: brightness(.97);
   }
-
-  @media (prefers-color-scheme: dark) {
-    .ron-decade-sequence-nav .nav-pill {
-      background: #1b1b1b;
-      border-color: rgba(255,255,255,.28);
-    }
+  /* Center both the footer container and its publication text. */
+  footer.site-footer.ron-published-footer-center {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    box-sizing: border-box;
   }
 </style>
 </head>
