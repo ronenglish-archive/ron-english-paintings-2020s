@@ -168,19 +168,34 @@
     width: 100% !important;
   }
 </style>
-<style id="ron-decade-last-row-centering-v1">
-/* Preserve established 260px year-card size while centering incomplete final rows. */
-.year-grid{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:stretch!important;
-  gap:18px!important;
+<style id="ron-decade-four-across-centered-v3">
+/* Four year cards across, with the final incomplete row centered. */
+.year-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  gap: 18px !important;
 }
-.year-grid > .year-card{
-  flex:0 1 260px!important;
-  width:100%!important;
-  max-width:260px!important;
+.year-grid > .year-card {
+  flex: 0 0 calc((100% - 54px) / 4) !important;
+  width: calc((100% - 54px) / 4) !important;
+  max-width: calc((100% - 54px) / 4) !important;
+  min-width: 0 !important;
+}
+@media (max-width: 900px) {
+  .year-grid > .year-card {
+    flex-basis: calc((100% - 18px) / 2) !important;
+    width: calc((100% - 18px) / 2) !important;
+    max-width: calc((100% - 18px) / 2) !important;
+  }
+}
+@media (max-width: 560px) {
+  .year-grid > .year-card {
+    flex-basis: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
 </style>
 <style>
@@ -268,16 +283,7 @@
     box-sizing: border-box;
   }
 </style>
-<style id="ron-paintings-decade-four-year-cards-v2">
-  /* Decade landing pages only: four year cards across on desktop. */
-  .year-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  @media (max-width: 900px) {
-    .year-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  }
-  @media (max-width: 560px) {
-    .year-grid { grid-template-columns: 1fr; }
-  }
-</style>
+
 </head>
 
 <body class="decade-overview-page">
