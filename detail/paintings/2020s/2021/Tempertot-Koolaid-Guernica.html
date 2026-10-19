@@ -265,7 +265,21 @@
     box-shadow: none !important;
   }
 </style>
-<style id="ron-painting-ancillary-standard-v1">.ron-ancillary-documentation{text-align:center}.ron-ancillary-documentation h2{text-align:center}.ron-ancillary-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}.ron-ancillary-item{display:block;width:100%;max-width:320px;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;background:#fff;text-decoration:none}.ron-ancillary-item img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;background:#f3f4f6;padding:6px}</style><style id="ron-ancillary-image-only-center-v1">.ancillary-gallery.documentation-grid .ancillary-figure.ancillary-image-only{grid-template-columns:1fr!important;width:100%;max-width:320px;margin-left:auto!important;margin-right:auto!important}.ancillary-gallery.documentation-grid .ancillary-figure.ancillary-image-only>a{width:100%;border-right:0!important;justify-content:center!important}.ancillary-gallery.documentation-grid .ancillary-figure.ancillary-image-only img{margin-left:auto!important;margin-right:auto!important}</style></head>
+<style id="ron-painting-ancillary-standard-v1">.ron-ancillary-documentation{text-align:center}.ron-ancillary-documentation h2{text-align:center}.ron-ancillary-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}.ron-ancillary-item{display:block;width:100%;max-width:320px;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;background:#fff;text-decoration:none}.ron-ancillary-item img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;background:#f3f4f6;padding:6px}</style><style id="ron-ancillary-image-only-center-v1">.ancillary-gallery.documentation-grid .ancillary-figure.ancillary-image-only{grid-template-columns:1fr!important;width:100%;max-width:320px;margin-left:auto!important;margin-right:auto!important}.ancillary-gallery.documentation-grid .ancillary-figure.ancillary-image-only>a{width:100%;border-right:0!important;justify-content:center!important}.ancillary-gallery.documentation-grid .ancillary-figure.ancillary-image-only img{margin-left:auto!important;margin-right:auto!important}</style><style id="ron-pdoc-five-panels-b01-v1">
+/* Painting detail documentary panels only; retained legacy styles are overridden here. */
+section.ron-pdoc-panel { width:100% !important; max-width:960px !important; box-sizing:border-box !important; margin:22px auto !important; padding:22px !important; border:1px solid #e5e7eb !important; border-radius:18px !important; background:#fff !important; box-shadow:0 4px 16px rgba(0,0,0,.06) !important; color:#222 !important; }
+section.ron-pdoc-panel > h2 { text-align:center !important; margin:0 0 18px !important; }
+section.ron-pdoc-panel .ron-pdoc-items.ancillary-gallery.documentation-grid { display:flex !important; flex-flow:row wrap !important; justify-content:center !important; align-items:flex-start !important; gap:16px !important; width:100% !important; max-width:100% !important; margin:0 auto !important; }
+section.ron-pdoc-panel .ron-pdoc-items figure.ancillary-figure.ron-pdoc-tile { flex:0 1 220px !important; display:flex !important; flex-direction:column !important; align-items:stretch !important; width:220px !important; max-width:100% !important; margin:0 !important; padding:0 !important; border:1px solid #e5e7eb !important; border-radius:13px !important; background:#fff !important; overflow:hidden !important; box-shadow:0 2px 9px rgba(0,0,0,.05) !important; color:#222 !important; }
+section.ron-pdoc-panel .ron-pdoc-items figure.ancillary-figure.ron-pdoc-tile > a { box-sizing:border-box !important; display:flex !important; justify-content:center !important; align-items:center !important; width:100% !important; height:192px !important; min-height:0 !important; padding:9px !important; margin:0 !important; border:0 !important; background:#f7f7f7 !important; }
+section.ron-pdoc-panel .ron-pdoc-items figure.ancillary-figure.ron-pdoc-tile > a > img { display:block !important; width:100% !important; max-width:100% !important; max-height:174px !important; height:100% !important; object-fit:contain !important; margin:0 auto !important; padding:0 !important; }
+section.ron-pdoc-panel .ron-pdoc-items figure.ancillary-figure.ron-pdoc-tile > figcaption { display:block !important; width:100% !important; box-sizing:border-box !important; padding:10px 11px 12px !important; margin:0 !important; text-align:center !important; font-size:13px !important; line-height:1.4 !important; border:0 !important; background:#fff !important; color:#222 !important; }
+section.ron-pdoc-panel .ron-pdoc-items figure.ancillary-figure.ron-pdoc-tile > figcaption .card-title { display:block !important; font-weight:650 !important; margin:0 !important; }
+section.ron-pdoc-panel .ron-pdoc-items figure.ancillary-figure.ron-pdoc-tile > figcaption .card-detail-text, section.ron-pdoc-panel .ron-pdoc-items figure.ancillary-figure.ron-pdoc-tile > figcaption .card-source { display:block !important; margin-top:5px !important; }
+section.ron-pdoc-panel .ron-pdoc-items figure.ancillary-figure.ron-pdoc-tile > figcaption a { display:inline !important; min-height:0 !important; width:auto !important; padding:0 !important; margin:0 !important; border:0 !important; background:none !important; text-decoration:underline !important; color:inherit !important; }
+@media(max-width:520px){section.ron-pdoc-panel{padding:14px !important;}section.ron-pdoc-panel .ron-pdoc-items figure.ancillary-figure.ron-pdoc-tile{flex-basis:210px !important; width:210px !important;}}
+</style>
+</head>
 
 <body>
   <header class="site-header">
@@ -324,64 +338,56 @@
 </p>
     </section>
 
-<section class="section-block" data-role="ancillary-documentation">
-  <h2>Ancillary Documentation</h2>
-  <div class="ancillary-gallery documentation-grid">
-<figure class="ancillary-figure">
+<section class="section-block ron-pdoc-panel" data-role="cultural-artistic-references">
+<h2>Cultural &amp; Artistic References</h2>
+<div class="ancillary-gallery documentation-grid ron-pdoc-items">
+<figure data-doc-role="cultural-artistic-references" class="ancillary-figure ron-pdoc-tile">
           <a href="https://ronenglish-archive.github.io/ron-english-paintings-2020s/images/Paintings/Public-Domain/Guernica.jpg" target="_blank" rel="noopener noreferrer">
             <img src="https://ronenglish-archive.github.io/ron-english-paintings-2020s/images/Paintings/Public-Domain/Guernica.jpg" alt="Archival documentation image for Tempertot Koolaid Guernica" loading="lazy" />
           </a>
           <figcaption>
             <span class="card-title">Pablo Picasso, <em>Guernica</em>, 1937</span>
-            <span class="card-detail-text">Visual source incorporated into this work.</span>
             <span class="card-source">Public domain image.</span>
           </figcaption>
         </figure>
-  
-        <figure class="ancillary-figure">
+<figure data-doc-role="cultural-artistic-references" class="ancillary-figure ron-pdoc-tile">
           <a href="../../../../images/Paintings/Web-Documentation/kool-aid-mascot-screenshot.jpg" target="_blank" rel="noopener noreferrer">
             <img src="../../../../images/Paintings/Web-Documentation/kool-aid-mascot-screenshot.jpg" alt="Kool-Aid Man" loading="lazy" />
           </a>
           <figcaption>
             <span class="card-title">Kool-Aid Man</span>
-            <span class="card-detail-text">Popular-culture character depicted in this work.</span>
             <span class="card-source"><a href="https://mascots.fandom.com/wiki/Kool-Aid_Man" target="_blank" rel="noopener noreferrer">Mascots Wiki</a></span>
           </figcaption>
         </figure>
-      
-        <figure class="ancillary-figure">
+<figure data-doc-role="cultural-artistic-references" class="ancillary-figure ron-pdoc-tile">
           <a href="../../../../images/Paintings/Web-Documentation/sylvester-screenshot.jpg" target="_blank" rel="noopener noreferrer">
             <img src="../../../../images/Paintings/Web-Documentation/sylvester-screenshot.jpg" alt="Sylvester" loading="lazy" />
           </a>
           <figcaption>
             <span class="card-title">Sylvester</span>
-            <span class="card-detail-text">Popular-culture character depicted in this work.</span>
             <span class="card-source"><a href="https://looneytunes.fandom.com/wiki/Sylvester" target="_blank" rel="noopener noreferrer">Looney Tunes Wiki</a></span>
           </figcaption>
         </figure>
-      
-        <figure class="ancillary-figure">
+<figure data-doc-role="cultural-artistic-references" class="ancillary-figure ron-pdoc-tile">
           <a href="../../../../images/Paintings/Web-Documentation/tweety-screenshot.jpg" target="_blank" rel="noopener noreferrer">
             <img src="../../../../images/Paintings/Web-Documentation/tweety-screenshot.jpg" alt="Tweety Bird" loading="lazy" />
           </a>
           <figcaption>
             <span class="card-title">Tweety Bird</span>
-            <span class="card-detail-text">Popular-culture character depicted in this work.</span>
             <span class="card-source"><a href="https://looneytunes.fandom.com/wiki/Tweety" target="_blank" rel="noopener noreferrer">Looney Tunes Wiki</a></span>
           </figcaption>
         </figure>
-      
-        <figure class="ancillary-figure">
+<figure data-doc-role="cultural-artistic-references" class="ancillary-figure ron-pdoc-tile">
           <a href="../../../../images/Paintings/Web-Documentation/donald-duck-screenshot.jpg" target="_blank" rel="noopener noreferrer">
             <img src="../../../../images/Paintings/Web-Documentation/donald-duck-screenshot.jpg" alt="Donald Duck" loading="lazy" />
           </a>
           <figcaption>
             <span class="card-title">Donald Duck</span>
-            <span class="card-detail-text">Popular-culture character depicted in this work.</span>
             <span class="card-source"><a href="https://disney.fandom.com/wiki/Donald_Duck" target="_blank" rel="noopener noreferrer">Disney Wiki</a></span>
           </figcaption>
         </figure>
-      <figure class="ancillary-figure"><a href="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/2000-01-01%2000.01.23-5.jpg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/2000-01-01%2000.01.23-5.jpg" alt="Tempertot Koolaid Guernica in the studio" loading="lazy"></a><figcaption><span class="card-title">Painting in studio</span><span class="card-detail-text">Studio photograph documenting this painting.</span></figcaption></figure></div>
+<figure data-doc-role="cultural-artistic-references" class="ancillary-figure ron-pdoc-tile"><a href="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/2000-01-01%2000.01.23-5.jpg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/2000-01-01%2000.01.23-5.jpg" alt="Tempertot Koolaid Guernica in the studio" loading="lazy"></a><figcaption><span class="card-title">Painting in studio</span><span class="card-detail-text">Studio photograph documenting this painting.</span></figcaption></figure>
+</div>
 </section>
 
 
