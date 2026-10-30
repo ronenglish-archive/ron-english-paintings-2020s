@@ -141,6 +141,86 @@ main section[data-role="cultural-artistic-references"] figure.ancillary-figure f
 .ron-2022-drawing-card figcaption a{font-weight:600;}
 @media(max-width:520px){main > section.section-block{padding:14px !important}.ron-2022-drawing-card{flex-basis:210px}}
 </style>
+<style data-catalogue-layout="RON-V3-PANEL-GRID-CORRECTION-20261030-V2">
+/* Final cascade override: Approved V3 Museum Frame 1080px panels, 25px spacing. */
+#catalogue-content > section.panel,
+main.work-layout > section.section-block.panel,
+main.work-layout > section.ron-related-panel.panel {
+  box-sizing:border-box !important; display:block !important;
+  width:calc(100% - 24px) !important; max-width:1080px !important;
+  margin:25px auto !important; padding:26px 24px !important;
+  background:#fff !important; color:#222 !important;
+  border:1px solid #e1e4e8 !important; border-radius:18px !important;
+  box-shadow:0 5px 18px #00000008 !important; text-align:center !important;
+  float:none !important; clear:both !important;
+}
+#catalogue-content > section.panel + section.panel,
+main.work-layout > section.section-block.panel + section.section-block.panel,
+main.work-layout > section.panel + section.panel {
+  margin-top:25px !important;
+}
+#catalogue-content > section.panel h2,
+main.work-layout > section.panel h2 {
+  font-family:Georgia,serif !important; font-weight:400 !important;
+  font-size:23px !important; margin:0 0 18px !important; text-align:center !important;
+}
+/* Cultural References: 1-3 cards at 265px; 4+ at 180px. */
+#cultural-artistic-references > .cultural-compact,
+#cultural-artistic-references > .cultural-large,
+main.work-layout section[data-role="cultural-artistic-references"] .ancillary-gallery.documentation-grid,
+main.work-layout section[data-role="cultural-artistic-references"] .ron-pdoc-items {
+  display:flex !important; flex-direction:row !important; flex-wrap:wrap !important;
+  justify-content:center !important; align-items:stretch !important;
+  gap:15px !important; width:100% !important; max-width:100% !important;
+  margin:0 auto !important; padding:0 !important; grid-template-columns:none !important;
+}
+#cultural-artistic-references .cultural-compact > .tile,
+main.work-layout section[data-role="cultural-artistic-references"] .ron-four-plus > figure {
+  box-sizing:border-box !important; flex:0 1 180px !important;
+  width:180px !important; max-width:180px !important; min-width:0 !important;
+  margin:0 !important;
+}
+#cultural-artistic-references .cultural-large > .tile,
+main.work-layout section[data-role="cultural-artistic-references"] .ancillary-gallery:not(.ron-four-plus) > figure {
+  box-sizing:border-box !important; flex:0 1 265px !important;
+  width:265px !important; max-width:265px !important; min-width:0 !important;
+  margin:0 !important;
+}
+#cultural-artistic-references .tileimg img,
+main.work-layout section[data-role="cultural-artistic-references"] figure img {
+  display:block; max-width:100% !important; object-fit:contain !important;
+  margin-left:auto !important; margin-right:auto !important;
+}
+/* Related Works cards remain grouped in panels, at 220px. */
+section.ron-related-panel .ron-related-gallery,
+section[data-role="related-works"] .ron-related-gallery,
+section[data-role="related-works"] .related-gallery,
+#related-works-by-ron-english .ron-related-gallery,
+#related-works-by-ron-english .related-gallery {
+  display:flex !important; flex-wrap:wrap !important; flex-direction:row !important;
+  justify-content:center !important; align-items:stretch !important;
+  gap:15px !important; margin:0 auto !important;
+}
+section.ron-related-panel .ron-related-gallery > figure.ron-related-tile,
+#related-works-by-ron-english .ron-related-gallery > figure.ron-related-tile {
+  box-sizing:border-box !important; flex:0 1 220px !important;
+  width:220px !important; max-width:220px !important;
+  margin:0 !important; background:#fff !important;
+  border:1px solid #ded9d0 !important; border-radius:12px !important;
+  overflow:hidden !important;
+}
+section.ron-related-panel .ron-related-gallery > figure.ron-related-tile img {
+  max-width:100% !important; height:auto !important; object-fit:contain !important;
+}
+@media (max-width:580px){
+  #catalogue-content > section.panel,
+  main.work-layout > section.section-block.panel,
+  main.work-layout > section.ron-related-panel.panel {padding:20px 12px !important;}
+  #cultural-artistic-references .cultural-compact > .tile,
+  #cultural-artistic-references .cultural-large > .tile,
+  main.work-layout section[data-role="cultural-artistic-references"] figure {max-width:min(100%,180px) !important;}
+}
+</style>
 </head>
 
 <body>
@@ -189,14 +269,14 @@ main section[data-role="cultural-artistic-references"] figure.ancillary-figure f
 
 
 
-<section class="section-block" data-role="notes">
+<section class="section-block panel" data-role="notes">
 <h2>Notes</h2>
 <p class="notes-text" data-note-source="drawing-use-discovery-20261028-v2">The drawing <a href="https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-013673--barney-grin-stepping-out.html"><em>Barney Grin Stepping Out</em></a> was used in the creation of this painting.</p>
 </section>
 
 
-<section class="section-block ron-pdoc-panel" data-role="cultural-artistic-references"><h2>Cultural &amp; Artistic References</h2><div class="ancillary-gallery documentation-grid ron-pdoc-items"><figure data-doc-role="cultural-artistic-references" class="ancillary-figure ron-pdoc-tile"><a href="https://ronenglish-archive.github.io/ron-english-paintings-2000s/images/Paintings/Web-Documentation2/barney-screenshot.jpg" target="_blank" rel="noopener noreferrer"><img src="https://ronenglish-archive.github.io/ron-english-paintings-2000s/images/Paintings/Web-Documentation2/barney-screenshot.jpg" loading="lazy" alt="Barney" /></a><figcaption><span class="card-title">Barney</span><span class="card-source"><a href="https://en.wikipedia.org/wiki/Barney_the_Dinosaur" target="_blank" rel="noopener noreferrer">Wikipedia</a></span></figcaption></figure></div></section>
-<section class="section-block" data-role="related-works"><h2>Related Works by Ron English</h2><h3>Used in the Creation of This Painting</h3><div class="ron-2022-drawing-grid"><figure class="ron-2022-drawing-card"><a class="ron-2022-drawing-thumb" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-013673--barney-grin-stepping-out.html" target="_blank" rel="noopener noreferrer"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/B-Rex%20Grin%20front%20ORIGINAL.jpg" alt="Barney Grin Stepping Out — preparatory drawing" loading="lazy"></a><figcaption><a href="https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-013673--barney-grin-stepping-out.html">Barney Grin Stepping Out</a></figcaption></figure></div></section>
+<section class="section-block panel ron-pdoc-panel" data-role="cultural-artistic-references"><h2>Cultural &amp; Artistic References</h2><div class="ancillary-gallery documentation-grid ron-pdoc-items"><figure data-doc-role="cultural-artistic-references" class="ancillary-figure ron-pdoc-tile"><a href="https://ronenglish-archive.github.io/ron-english-paintings-2000s/images/Paintings/Web-Documentation2/barney-screenshot.jpg" target="_blank" rel="noopener noreferrer"><img src="https://ronenglish-archive.github.io/ron-english-paintings-2000s/images/Paintings/Web-Documentation2/barney-screenshot.jpg" loading="lazy" alt="Barney" /></a><figcaption><span class="card-title">Barney</span><span class="card-source"><a href="https://en.wikipedia.org/wiki/Barney_the_Dinosaur" target="_blank" rel="noopener noreferrer">Wikipedia</a></span></figcaption></figure></div></section>
+<section class="section-block panel ron-related-panel" data-role="related-works"><h2>Related Works by Ron English</h2><h3>Used in the Creation of This Painting</h3><div class="ron-2022-drawing-grid"><figure class="ron-2022-drawing-card"><a class="ron-2022-drawing-thumb" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-013673--barney-grin-stepping-out.html" target="_blank" rel="noopener noreferrer"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/B-Rex%20Grin%20front%20ORIGINAL.jpg" alt="Barney Grin Stepping Out — preparatory drawing" loading="lazy"></a><figcaption><a href="https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-013673--barney-grin-stepping-out.html">Barney Grin Stepping Out</a></figcaption></figure></div></section>
 <!-- WORK-SEQUENCE-NAV-START --><nav class="work-sequence-nav" aria-label="Artwork sequence navigation"><div class="sequence-nav-inner"><a class="nav-pill sequence-pill prev-work" href="Alien-Frog-Brain.html">&larr; Previous: Alien Frog Brain</a><a class="nav-pill sequence-pill next-work" href="Big-Duck.html">Next: Big Duck &rarr;</a></div></nav><!-- WORK-SEQUENCE-NAV-END --></main>
 <footer class="site-footer ron-published-footer-center">Published via GitHub Pages<br>for long-term public access.</footer>
 </body>
