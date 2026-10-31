@@ -52,30 +52,30 @@ h1,h2,h3{font-family:Georgia,serif;font-weight:400;margin:0} h1{font-size:clamp(
 .panel-artworks .mainpainting{width:100%;max-height:550px}
 /* Related Works: each image and title/optional note live inside one subtle card. */
 .related-gallery{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:15px}
-.related-gallery>.tile{flex:0 1 220px;width:220px;max-width:100%;border:1px solid #ded9d0;border-radius:12px;box-shadow:0 2px 8px #0000000b}
+.related-gallery>.tile{flex:0 1 265px;width:265px;max-width:100%;border:1px solid #ded9d0;border-radius:12px;box-shadow:0 2px 8px #0000000b}
 .related-gallery>.tile .tileimg{height:192px}
 .related-gallery>.tile .tilecaption{border-top:1px solid #ece9e3;background:#fff;padding:10px 10px 12px}
 .related-gallery>.tile .tilename{font-weight:600}
 /* Cultural references: one to three can be larger; four or more remain compact. */
-.cultural-large>.tile{flex:0 1 265px;max-width:265px;width:100%}
-.cultural-compact>.tile{flex:0 1 180px;max-width:180px;width:100%}
-.cultural-large .tileimg{height:200px}.cultural-compact .tileimg{height:142px}
-@media(max-width:580px){.panel-artworks{gap:9px}.panel-artworks.two,.panel-artworks.three,.panel-artworks.four{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-artworks.three>.painting-mat:first-child{width:min(100%,350px)}.cultural-large>.tile,.cultural-compact>.tile{flex-basis:min(100%,180px)}.related-gallery>.tile{flex-basis:min(100%,210px)}}
+.cultural-large>.tile{flex:0 1 220px;max-width:220px;width:100%}
+.cultural-compact{max-width:960px;margin-left:auto;margin-right:auto}.cultural-compact>.tile{flex:0 1 180px;max-width:180px;width:100%}
+.cultural-large .tileimg{height:158px}.cultural-compact .tileimg{height:142px}
+@media(max-width:580px){.panel-artworks{gap:9px}.panel-artworks.two,.panel-artworks.three,.panel-artworks.four{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-artworks.three>.painting-mat:first-child{width:min(100%,350px)}.cultural-large>.tile{flex-basis:min(100%,220px)}.cultural-compact>.tile{flex-basis:min(100%,180px)}.related-gallery>.tile{flex-basis:min(100%,265px)}}
 
 /* Culture-only V3 pages: same contained card hierarchy as approved V3. */
 .panel.preserved-section .ron-pdoc-items{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important;gap:16px!important;margin:0 auto!important;max-width:100%!important}
-.panel.preserved-section figure.ron-pdoc-tile{box-sizing:border-box;display:flex!important;flex:0 0 265px!important;width:265px!important;max-width:100%!important;flex-direction:column!important;align-items:stretch!important;margin:0!important;padding:0!important;border:1px solid #e3e5e8;border-radius:9px;overflow:hidden;background:#fff}
+.panel.preserved-section figure.ron-pdoc-tile{box-sizing:border-box;display:flex!important;flex:0 0 220px!important;width:220px!important;max-width:100%!important;flex-direction:column!important;align-items:stretch!important;margin:0!important;padding:0!important;border:1px solid #e3e5e8;border-radius:9px;overflow:hidden;background:#fff}
 .panel.preserved-section.compact-culture figure.ron-pdoc-tile{flex-basis:180px!important;width:180px!important}
-.panel.preserved-section figure.ron-pdoc-tile>a{display:flex;align-items:center;justify-content:center;padding:10px;height:200px;box-sizing:border-box;background:#f6f6f6}
-.panel.preserved-section.compact-culture figure.ron-pdoc-tile>a{height:160px}
+.panel.preserved-section figure.ron-pdoc-tile>a{display:flex;align-items:center;justify-content:center;padding:10px;height:158px;box-sizing:border-box;background:#f6f6f6}
+.panel.preserved-section.compact-culture figure.ron-pdoc-tile>a{height:142px}
 .panel.preserved-section figure.ron-pdoc-tile img{display:block;width:100%;height:100%;object-fit:contain}
 .panel.preserved-section figure.ron-pdoc-tile figcaption{padding:10px;text-align:center;font-size:13px;line-height:1.4}
 .panel.preserved-section .card-title,.panel.preserved-section .card-detail-text,.panel.preserved-section .card-source{display:block}
-@media(max-width:580px){.panel.preserved-section figure.ron-pdoc-tile{flex-basis:min(265px,100%)!important;width:min(265px,100%)!important}}
+@media(max-width:580px){.panel.preserved-section figure.ron-pdoc-tile{flex-basis:min(220px,100%)!important;width:min(220px,100%)!important}}
 
 /* Original 2023 Related Works drawing-card markup: approved 220px sizing. */
 .panel.preserved-section .ron-2022-drawing-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;max-width:100%}
-.panel.preserved-section figure.ron-2022-drawing-card{box-sizing:border-box;flex:0 1 220px;width:220px;max-width:100%;margin:0;border:1px solid #ded9d0;border-radius:10px;overflow:hidden;background:#fff}
+.panel.preserved-section figure.ron-2022-drawing-card{box-sizing:border-box;flex:0 1 265px;width:265px;max-width:100%;margin:0;border:1px solid #ded9d0;border-radius:10px;overflow:hidden;background:#fff}
 .panel.preserved-section .ron-2022-drawing-thumb{display:flex;align-items:center;justify-content:center;width:100%;height:192px;padding:10px;box-sizing:border-box;background:#f6f6f6}
 .panel.preserved-section .ron-2022-drawing-thumb img{display:block;width:100%;height:100%;object-fit:contain}
 .panel.preserved-section figure.ron-2022-drawing-card figcaption{padding:10px;text-align:center;line-height:1.4}
@@ -117,7 +117,44 @@ const paintingData = {
     "drawings": [],
     "graphicDesigns": [],
     "other": [],
-    "usedInCreation": []
+    "usedInCreation": [
+      {"title":"Orion the Obese Alien","image":"https://ronenglish-archive.github.io/ron-english-sketches-aliens/images/Sketches/aliens/Orion%20the%20Obese%20Alien%20-%20three%20quarters%20original.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-aliens/Sketches/aliens/orion-the-obese-alien.html"},
+      {"title":"Alien Cherub Three Quarters","image":"https://ronenglish-archive.github.io/ron-english-sketches-aliens/images/Sketches/aliens/Alien%20cherub%20three%20quarters%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-aliens/Sketches/aliens/alien-cherub-three-quarters.html"},
+      {"title":"Bombadeer","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Ungulates/deer/Bomba%20Deer%20(Rocket%20Reindeer)%20COLOR%201.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/ungulates/deer/bomba-deer/index.html"},
+      {"title":"Squeel","image":"https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/Scan_20260614%20%2822%29.jpg?v=20260614c","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/swine/entries/re-013853.html"},
+      {"title":"Raquel Cowgirl Right Side 1","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Ungulates/cattle/Raquel%20Cowgirl%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/cattle/entries/re-013114.html"},
+      {"title":"Waylone Wolf Flying Side","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Canines%20and%20felines/Wolves/Waylone%20Running%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/wolves/works/re-013136.html"},
+      {"title":"Sleepy Kitty","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Canines%20and%20felines/Cats/Alien%20Kitty%20for%20Hat%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/felines/works/re-015788.html"},
+      {"title":"Noodle Poodle","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Canines%20and%20felines/Dogs/Noodle%20Poodle%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/dogs/works/re-012721.html"},
+      {"title":"Bunnny Mermaid and Paws","image":"https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/images/Sketches/character-groups-and-ensembles/Bunnny%20Mermaid%20and%20Paws%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-people-characters/Sketches/people-characters/works/re-013069.html"},
+      {"title":"Forlorn Unicorn Front and Back","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Ungulates/Equines/Forlorn%20Unicorn%20version%201%20B%26W.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/equines/forlorn-unicorn/re-012809.html"},
+      {"title":"Zephyr Zelephant","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Ungulates/Elephants/Zephyr%20Zelephant%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/elephants/works/re-012647.html"},
+      {"title":"Mouse Riding Dragon","image":"https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/images/Sketches/character-groups-and-ensembles/Mouse%20Riding%20Dragon%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/mice/entries/re-014989.html"},
+      {"title":"Self Service","image":"https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260616%20%2845%29.jpg?v=20260616b","url":"https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/Sketches/kaijus/works/re-014044.html"},
+      {"title":"Flying Barney","image":"https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins/Barney%20Grin%20Flying%20ORIGINAL.jpg?v=1","url":"https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-016171--flying-barney.html"},
+      {"title":"Mickey Grin Flying","image":"https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Mickey%20Mouse%20Grin%20Flying%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-016231--mickey-grin-flying.html"},
+      {"title":"MC Grin Flying","image":"https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/MC%20Supersize%20Grin%20Flying%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-016229--mc-grin-flying.html"},
+      {"title":"Stubborn Steed","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Ungulates/Equines/Stubborn%20Steed%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/equines/stubborn-steed/re-013455.html"},
+      {"title":"Homer Grin","image":"https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Homer%20Grin%20Flying%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-016268--homer-grin.html"},
+      {"title":"Charlie Brown Grin Flying","image":"https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Charlie%20Grin%20Flying%20B%26W.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-016501--charlie-brown-grin-flying.html"},
+      {"title":"Telegrinnie Floating","image":"https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Teletubby%20Grin%20Flying%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-016277--telegrinnie-flowting.html"},
+      {"title":"Techno Kitten MC Supersized","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Canines%20and%20felines/Cats/Techno%20Kitten%20MC%20Supersized%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/felines/works/re-013149.html"},
+      {"title":"Skate Goat","image":"https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-animals/main/images/Sketches/Ungulates/sheep/Skate%20Goat%20ORIGINAL.jpg?v=1","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/sheep/entries/re-012757-v.html"},
+      {"title":"Buzzard Pilot Side","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/avians/buzzards/Delusionville%20Pilots%20-%20Buzzard%20side%20view%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/buzzards/entries/re-012959.html"},
+      {"title":"Cathy Cowgirl – Delusionville Pilot Left Side","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Ungulates/cattle/Delusionville%20Pilot%20Cathy%20Cowgirl%20Side%20View%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/cattle/entries/re-012961.html"},
+      {"title":"Elefanka Floating","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Ungulates/Elephants/Elefanka%202%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/elephants/works/re-013352.html"},
+      {"title":"Slo Mo UFO 3","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Reptiles/Turtles/Delusionville%20Pilot%20Slo%20Mo%201%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/turtles/entries/re-012960.html"},
+      {"title":"Waylone Wolf Lady Lick","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Canines%20and%20felines/Wolves/Waylone%20Lick%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/wolves/works/re-013508.html"},
+      {"title":"Slo Mo Snapper with Mic","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Reptiles/Turtles/Slo%20Moe%20With%20Micropohone%20B%26W.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/turtles/entries/re-015985.html"},
+      {"title":"Alien Superman 2","image":"https://ronenglish-archive.github.io/ron-english-sketches-aliens/images/Sketches/aliens/Alien%20Superman%20-%20pose%202%20original.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-aliens/Sketches/aliens/alien-superman-2.html"},
+      {"title":"Angie Waters","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/aquatic-dwellers/aqua-apes/Angie%20Waters%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/aquatic-dwellers/aqua-apes/angie-waters.html"},
+      {"title":"Swirly Angie Aqua Ape","image":"https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/images/Sketches/character-groups-and-ensembles/Swirly%20Angie%20Aqua%20Ape%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-people-characters/Sketches/people-characters/works/re-013074.html"},
+      {"title":"Woman Riding Dragon","image":"https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-mythic-dark/main/images/Sketches/Kaijus/Woman%20Riding%20Dragon%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/Sketches/kaijus/works/re-016786.html"},
+      {"title":"Falla Sheep Cute","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Ungulates/sheep/Falla%20Sheep%20Cute%20ORIGINAL%20(2).jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/sheep/entries/re-012718.html"},
+      {"title":"Falla Sheep Early Version Left Side Sitting","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Ungulates/sheep/Falla%20Sheep%20Early%20Version%20Sitting%20left%20side%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/sheep/entries/re-013581.html"},
+      {"title":"Libra Zebra","image":"https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/Ungulates/Equines/Libra%20Zebra%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-animals/Sketches/equines/libra-zebra/index.html"},
+      {"title":"Horny Saurus Side 2","image":"https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Kaijus/Horny%20Saurus%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/Sketches/kaijus/works/re-016351.html"}
+    ]
   },
   "culturalReferences": [],
   "preservedSections": [

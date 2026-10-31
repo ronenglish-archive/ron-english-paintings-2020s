@@ -52,26 +52,26 @@ h1,h2,h3{font-family:Georgia,serif;font-weight:400;margin:0} h1{font-size:clamp(
 .panel-artworks .mainpainting{width:100%;max-height:550px}
 /* Related Works: each image and title/optional note live inside one subtle card. */
 .related-gallery{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:15px}
-.related-gallery>.tile{flex:0 1 220px;width:220px;max-width:100%;border:1px solid #ded9d0;border-radius:12px;box-shadow:0 2px 8px #0000000b}
+.related-gallery>.tile{flex:0 1 265px;width:265px;max-width:100%;border:1px solid #ded9d0;border-radius:12px;box-shadow:0 2px 8px #0000000b}
 .related-gallery>.tile .tileimg{height:192px}
 .related-gallery>.tile .tilecaption{border-top:1px solid #ece9e3;background:#fff;padding:10px 10px 12px}
 .related-gallery>.tile .tilename{font-weight:600}
 /* Cultural references: one to three can be larger; four or more remain compact. */
-.cultural-large>.tile{flex:0 1 265px;max-width:265px;width:100%}
-.cultural-compact>.tile{flex:0 1 180px;max-width:180px;width:100%}
-.cultural-large .tileimg{height:200px}.cultural-compact .tileimg{height:142px}
-@media(max-width:580px){.panel-artworks{gap:9px}.panel-artworks.two,.panel-artworks.three,.panel-artworks.four{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-artworks.three>.painting-mat:first-child{width:min(100%,350px)}.cultural-large>.tile,.cultural-compact>.tile{flex-basis:min(100%,180px)}.related-gallery>.tile{flex-basis:min(100%,210px)}}
+.cultural-large>.tile{flex:0 1 220px;max-width:220px;width:100%}
+.cultural-compact{max-width:960px;margin-left:auto;margin-right:auto}.cultural-compact>.tile{flex:0 1 180px;max-width:180px;width:100%}
+.cultural-large .tileimg{height:158px}.cultural-compact .tileimg{height:142px}
+@media(max-width:580px){.panel-artworks{gap:9px}.panel-artworks.two,.panel-artworks.three,.panel-artworks.four{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-artworks.three>.painting-mat:first-child{width:min(100%,350px)}.cultural-large>.tile{flex-basis:min(100%,220px)}.cultural-compact>.tile{flex-basis:min(100%,180px)}.related-gallery>.tile{flex-basis:min(100%,265px)}}
 
 /* Culture-only V3 pages: same contained card hierarchy as approved V3. */
 .panel.preserved-section .ron-pdoc-items{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important;gap:16px!important;margin:0 auto!important;max-width:100%!important}
-.panel.preserved-section figure.ron-pdoc-tile{box-sizing:border-box;display:flex!important;flex:0 0 265px!important;width:265px!important;max-width:100%!important;flex-direction:column!important;align-items:stretch!important;margin:0!important;padding:0!important;border:1px solid #e3e5e8;border-radius:9px;overflow:hidden;background:#fff}
+.panel.preserved-section figure.ron-pdoc-tile{box-sizing:border-box;display:flex!important;flex:0 0 220px!important;width:220px!important;max-width:100%!important;flex-direction:column!important;align-items:stretch!important;margin:0!important;padding:0!important;border:1px solid #e3e5e8;border-radius:9px;overflow:hidden;background:#fff}
 .panel.preserved-section.compact-culture figure.ron-pdoc-tile{flex-basis:180px!important;width:180px!important}
-.panel.preserved-section figure.ron-pdoc-tile>a{display:flex;align-items:center;justify-content:center;padding:10px;height:200px;box-sizing:border-box;background:#f6f6f6}
-.panel.preserved-section.compact-culture figure.ron-pdoc-tile>a{height:160px}
+.panel.preserved-section figure.ron-pdoc-tile>a{display:flex;align-items:center;justify-content:center;padding:10px;height:158px;box-sizing:border-box;background:#f6f6f6}
+.panel.preserved-section.compact-culture figure.ron-pdoc-tile>a{height:142px}
 .panel.preserved-section figure.ron-pdoc-tile img{display:block;width:100%;height:100%;object-fit:contain}
 .panel.preserved-section figure.ron-pdoc-tile figcaption{padding:10px;text-align:center;font-size:13px;line-height:1.4}
 .panel.preserved-section .card-title,.panel.preserved-section .card-detail-text,.panel.preserved-section .card-source{display:block}
-@media(max-width:580px){.panel.preserved-section figure.ron-pdoc-tile{flex-basis:min(265px,100%)!important;width:min(265px,100%)!important}}
+@media(max-width:580px){.panel.preserved-section figure.ron-pdoc-tile{flex-basis:min(220px,100%)!important;width:min(220px,100%)!important}}
 </style></head><body><div class="wrapper">
 <!-- Catalogue navigation: replace decade links only if official structure changes -->
 <nav class="topnav"><a class="pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue home</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1970s/paintings/1970s.html">1960s–1970s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1980s/paintings/1980s.html">1980s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1990s/paintings/1990s.html">1990s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-2000s/paintings/2000s.html">2000s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-2010s/paintings/2010s.html">2010s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-2020s/paintings/2020s.html">2020s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a></nav>
@@ -110,7 +110,7 @@ const paintingData = {
     "drawings": [],
     "graphicDesigns": [],
     "other": [],
-    "usedInCreation": []
+    "usedInCreation": [{"caption":"","title":"Old SpongeBob","url":"https://ronenglish-archive.github.io/ron-english-sketches-pop-culture/Sketches/pop-culture-public-figures/works/re-013332.html","image":"https://ronenglish-archive.github.io/ron-english-sketches-pop-culture/images/Sketches/celebrity-characters/Spongebob%20Family/Old%20and%20Grumpy%20Spongebob%20ORIGINAL.jpg"}]
   },
   "culturalReferences": [],
   "preservedSections": [

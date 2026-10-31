@@ -52,15 +52,15 @@ h1,h2,h3{font-family:Georgia,serif;font-weight:400;margin:0} h1{font-size:clamp(
 .panel-artworks .mainpainting{width:100%;max-height:550px}
 /* Related Works: each image and title/optional note live inside one subtle card. */
 .related-gallery{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:15px}
-.related-gallery>.tile{flex:0 1 220px;width:220px;max-width:100%;border:1px solid #ded9d0;border-radius:12px;box-shadow:0 2px 8px #0000000b}
+.related-gallery>.tile{flex:0 1 265px;width:265px;max-width:100%;border:1px solid #ded9d0;border-radius:12px;box-shadow:0 2px 8px #0000000b}
 .related-gallery>.tile .tileimg{height:192px}
 .related-gallery>.tile .tilecaption{border-top:1px solid #ece9e3;background:#fff;padding:10px 10px 12px}
 .related-gallery>.tile .tilename{font-weight:600}
 /* Cultural references: one to three can be larger; four or more remain compact. */
-.cultural-large>.tile{flex:0 1 265px;max-width:265px;width:100%}
-.cultural-compact>.tile{flex:0 1 180px;max-width:180px;width:100%}
-.cultural-large .tileimg{height:200px}.cultural-compact .tileimg{height:142px}
-@media(max-width:580px){.panel-artworks{gap:9px}.panel-artworks.two,.panel-artworks.three,.panel-artworks.four{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-artworks.three>.painting-mat:first-child{width:min(100%,350px)}.cultural-large>.tile,.cultural-compact>.tile{flex-basis:min(100%,180px)}.related-gallery>.tile{flex-basis:min(100%,210px)}}
+.cultural-large>.tile{flex:0 1 220px;max-width:220px;width:100%}
+.cultural-compact{max-width:960px;margin-left:auto;margin-right:auto}.cultural-compact>.tile{flex:0 1 180px;max-width:180px;width:100%}
+.cultural-large .tileimg{height:158px}.cultural-compact .tileimg{height:142px}
+@media(max-width:580px){.panel-artworks{gap:9px}.panel-artworks.two,.panel-artworks.three,.panel-artworks.four{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-artworks.three>.painting-mat:first-child{width:min(100%,350px)}.cultural-large>.tile{flex-basis:min(100%,220px)}.cultural-compact>.tile{flex-basis:min(100%,180px)}.related-gallery>.tile{flex-basis:min(100%,265px)}}
 
 /* 2025 preserved factual supporting-section presentation. */
 .panel.preserved-section .ancillary-gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin:0 auto}
@@ -97,9 +97,10 @@ const paintingData = {
     "Signature": "No signature observed in available documentation."
   },
   "exhibitions": [],
-  "literature": [],
+  "literature": ["Ron English, \u003cem\u003eRon English\u0027s Popaganda Coloring Book\u003c/em\u003e (San Francisco: Last Gasp, 2016), p. 2. ISBN 978-0867198515."],
   "notes": [],
-  "workInProgress": [],
+  "workInProgress": [{"title":"","caption":"","image":"https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Tots/Li%27l%20Tot%20ORIGINAL.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Tots/Li%27l%20Tot%20ORIGINAL.jpg"}],
+  "digitizedVersions": [{"title":"","caption":"","image":"https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Tots/Li%27l%20Tot%20B%26W.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Tots/Li%27l%20Tot%20B%26W.jpg"},{"title":"","caption":"","image":"https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Tots/Li%27l%20Tot%20COLOR.jpg","url":"https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Tots/Li%27l%20Tot%20COLOR.jpg"}],
   "photoGallery": [],
   "referenceMaterials": [],
   "relatedWorks": {
@@ -226,6 +227,7 @@ list('exhibitions','Exhibitions',d.exhibitions);
 list('literature','Literature',d.literature);
 list('notes','Notes',d.notes);
 cardSection('work-in-progress','Work in Progress',d.workInProgress);
+cardSection('digitized-versions','Digitized Versions',d.digitizedVersions);
 cardSection('photo-gallery','Photo Gallery',d.photoGallery);
 cardSection('reference-materials','Reference Materials',d.referenceMaterials);
 const groups=[['Used in the Creation of This Painting',d.relatedWorks?.usedInCreation],['Related Paintings',d.relatedWorks?.paintings],['Related Drawings & Sketches',d.relatedWorks?.drawings],['Artist-Created Graphic Designs',d.relatedWorks?.graphicDesigns],['Other Related Works',d.relatedWorks?.other]];
