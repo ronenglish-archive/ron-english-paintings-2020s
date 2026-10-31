@@ -17,58 +17,45 @@
 <link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
 
 <style id="museum-frame-v3-static-2021">
-/* Museum Frame V3 — static HTML, consolidated 2021 detail styles */
-*,*::before,*::after{box-sizing:border-box}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#f7f6f3;color:#222;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:15px;line-height:1.65;text-align:center}
+body{margin:0;color:#222;background:#f7f6f3;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;font-size:15px;line-height:1.6}
 a{color:inherit}
-.site-header{max-width:1180px;margin:0 auto;padding:24px 18px 8px}
-.site-header nav,.site-header .nav-links,.work-sequence-nav .sequence-nav-inner{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
-.site-header a,.work-sequence-nav a{display:inline-block;text-decoration:none;border:1px solid #dadde2;border-radius:99px;background:#fff;padding:8px 14px;font-size:13px;line-height:1.4}
-main.work-layout{max-width:1180px;margin:0 auto;padding:10px 18px 30px;display:block}
-main.work-layout>figure.hero-card{display:block;width:100%;max-width:1080px;margin:24px auto 0;padding:38px 28px;background:#fff;border:1px solid #ccc2b1;outline:1px solid #eae5db;outline-offset:-11px;border-radius:3px;box-shadow:0 15px 35px #473b2712;text-align:center;overflow:visible}
-.hero-card .work-hero-link{display:inline-flex;max-width:100%;width:auto;align-items:center;justify-content:center;margin:0 auto;padding:11px;background:#f6f3ec;border:1px solid #bfb9ad;box-shadow:0 1px 5px #1e19121f,0 7px 18px #1e19120b;text-decoration:none;line-height:0}
-.hero-card img.work-hero{display:block;max-width:100%;width:auto;height:auto;max-height:760px;object-fit:contain;margin:0;border:1px solid #463f3424;border-radius:0;box-shadow:none}
-main.work-layout>ul.work-meta{list-style:none;max-width:1080px;width:100%;margin:0 auto 24px;padding:24px 20px 28px;background:#fff;border:1px solid #e1e4e8;border-radius:0 0 16px 16px;box-shadow:0 5px 18px #00000008;text-align:center;line-height:1.95}
-.work-meta li{display:block;list-style:none;margin:0;padding:0}
-.work-meta li strong{font-weight:600}
-main.work-layout>.work-sequence-nav{max-width:1080px;margin:18px auto 20px;padding:0;display:flex;justify-content:center}
-.work-sequence-nav .sequence-nav-inner{width:100%;max-width:1080px}
-.site-footer{border-top:1px solid #e2e4e8;margin:35px auto 0;padding:25px 15px;color:#777;font-size:14px;text-align:center}
-@media(max-width:580px){.site-header{padding:15px 10px 6px}main.work-layout{padding:8px 10px 20px}main.work-layout>figure.hero-card{padding:22px 12px}.hero-card .work-hero-link{padding:7px}main.work-layout>ul.work-meta{padding:20px 12px}.work-sequence-nav .sequence-nav-inner{flex-direction:column;align-items:stretch}}
-
-/* Documentary sections: preserve original text and source links while keeping panels uniform. */
-main.work-layout>section.section-block,main.work-layout>section.ron-pdoc-panel{width:100%;max-width:1080px;margin:20px auto;padding:26px 24px;border:1px solid #e0e3e7;border-radius:16px;background:#fff;box-shadow:0 4px 16px #0000000a;color:#222;text-align:center}
-main.work-layout>section.section-block h2{margin:0 0 17px;text-align:center;font-weight:650}
-main.work-layout>section.section-block h3{margin:8px 0 15px;font-size:1.03rem}
-main.work-layout>section.section-block p{max-width:950px;margin:10px auto;line-height:1.7}
-/* Drawings: 220px gallery tile size mandated by related-works standard. */
-section[data-role="related-works"] .ron-2022-drawing-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:16px;width:100%;max-width:100%;margin:12px auto}
-section[data-role="related-works"] figure.ron-2022-drawing-card{flex:0 1 220px;width:220px;max-width:100%;margin:0;padding:10px;border:1px solid #e4e6e8;border-radius:12px;background:#fafafa;overflow:hidden;box-shadow:none;display:flex;flex-direction:column;align-items:center}
-section[data-role="related-works"] a.ron-2022-drawing-thumb{width:100%;height:190px;display:flex;align-items:center;justify-content:center;text-decoration:none;background:#fff}
-section[data-role="related-works"] figure.ron-2022-drawing-card img{display:block;width:auto;max-width:100%;max-height:190px;height:auto;object-fit:contain;margin:0 auto;border:0;box-shadow:none}
-section[data-role="related-works"] figure.ron-2022-drawing-card figcaption{width:100%;padding:10px 4px 4px;text-align:center;font-size:.9rem;line-height:1.45}
-/* Documentary/reference figures: 265px for 1–3 cards; 180px for 4+. */
-section.ron-pdoc-panel .ron-pdoc-items.ancillary-gallery.documentation-grid,main.work-layout .ancillary-gallery.documentation-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:16px;width:100%;max-width:100%;margin:10px auto}
-section.ron-pdoc-panel figure.ancillary-figure.ron-pdoc-tile,main.work-layout .ancillary-gallery.documentation-grid figure.ancillary-figure{flex:0 1 265px;width:265px;max-width:100%;margin:0;padding:10px;background:#fafafa;border:1px solid #e4e6e8;border-radius:12px;display:flex;flex-direction:column;align-items:center;overflow:hidden;box-shadow:none}
-section.ron-pdoc-panel .ron-pdoc-items:has(>figure:nth-child(4)) figure.ancillary-figure.ron-pdoc-tile,main.work-layout .ancillary-gallery.documentation-grid:has(>figure:nth-child(4)) figure.ancillary-figure{flex-basis:180px;width:180px}
-section.ron-pdoc-panel figure.ancillary-figure>a,main.work-layout .ancillary-gallery.documentation-grid figure.ancillary-figure>a{width:100%;display:flex;align-items:center;justify-content:center;padding:0;background:transparent;border:0;min-height:0}
-section.ron-pdoc-panel figure.ancillary-figure img,main.work-layout .ancillary-gallery.documentation-grid figure.ancillary-figure img{width:auto;max-width:100%;height:auto;max-height:245px;object-fit:contain;border:0;border-radius:0;margin:0 auto;box-shadow:none}
-section.ron-pdoc-panel .ron-pdoc-items:has(>figure:nth-child(4)) figure.ancillary-figure img,main.work-layout .ancillary-gallery.documentation-grid:has(>figure:nth-child(4)) figure.ancillary-figure img{max-height:170px}
-section.ron-pdoc-panel figure.ancillary-figure figcaption,main.work-layout .ancillary-gallery.documentation-grid figure.ancillary-figure figcaption{display:block;width:100%;padding:10px 4px 4px;margin:0;text-align:center;font-size:.88rem;line-height:1.5;background:none}
-section.ron-pdoc-panel figure.ancillary-figure figcaption a,main.work-layout .ancillary-gallery.documentation-grid figcaption a{display:inline;border:0;padding:0;text-decoration:underline;background:none}
-.card-title{display:block;font-weight:650}.card-detail-text,.card-source{display:block;margin-top:5px}
-@media(max-width:580px){main.work-layout>section.section-block{padding:18px 12px}section.ron-pdoc-panel figure.ancillary-figure.ron-pdoc-tile{max-width:100%}}
-
-/* 2021 source-specific static elements, while retaining original body and links. */
-main.work-layout>a.work-hero-link{display:flex;width:100%;max-width:1080px;min-height:240px;margin:24px auto 0;padding:35px 25px;background:#fff;border:1px solid #ccc2b1;outline:1px solid #eae5db;outline-offset:-11px;box-shadow:0 15px 35px #473b2712;align-items:center;justify-content:center}
-main.work-layout>a.work-hero-link>img.work-hero{display:block;width:auto;max-width:100%;max-height:760px;height:auto;object-fit:contain;padding:11px;background:#f6f3ec;border:1px solid #bfb9ad;box-shadow:0 7px 18px #1e19120b}
-section[data-role="related-works"] .ron-2021-drawing-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:16px;max-width:100%;margin:12px auto}
-section[data-role="related-works"] figure.ron-2021-drawing-card{flex:0 1 220px;width:220px;max-width:100%;margin:0;padding:10px;border:1px solid #e4e6e8;border-radius:12px;background:#fafafa;overflow:hidden;box-shadow:none;display:flex;flex-direction:column;align-items:center}
-section[data-role="related-works"] a.ron-2021-drawing-thumb{width:100%;height:190px;display:flex;align-items:center;justify-content:center;text-decoration:none;background:#fff}
-section[data-role="related-works"] figure.ron-2021-drawing-card img{display:block;width:auto;max-width:100%;max-height:190px;height:auto;object-fit:contain;margin:0 auto;border:0;box-shadow:none}
-section[data-role="related-works"] figure.ron-2021-drawing-card figcaption{width:100%;padding:10px 4px 4px;text-align:center;font-size:.9rem;line-height:1.45}
-@media(max-width:580px){main.work-layout>a.work-hero-link{padding:22px 12px}}
+.site-header{max-width:1180px;margin:0 auto;padding:20px 18px 0}
+.top-nav{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:10px auto 20px}
+.top-nav a,.sequence-nav-inner a{display:inline-flex;align-items:center;justify-content:center;border:1px solid #dadde2;border-radius:99px;padding:8px 14px;font-size:13px;line-height:1.4;text-decoration:none;background:white}
+.top-nav a:hover,.sequence-nav-inner a:hover{background:#f3f4f6}
+.top-nav .is-active{background:#eeeae2}
+main.work-layout{display:block;max-width:1180px;margin:0 auto;padding:26px 18px 42px;text-align:center}
+main.work-layout>.hero,main.work-layout>.panel{width:100%;max-width:1080px;margin:25px auto;padding:26px 24px;background:white;border:1px solid #e1e4e8;border-radius:18px;box-shadow:0 5px 18px #00000008}
+main.work-layout>.hero{border:1px solid #ccc2b1;outline:1px solid #eae5db;outline-offset:-11px;border-radius:3px;padding:38px 28px;box-shadow:0 15px 35px #473b2712}
+h1,h2,h3{font-family:Georgia,serif;font-weight:400;margin:0}
+h1{font-size:clamp(32px,5vw,47px);margin-bottom:24px}
+h2{font-size:23px;margin-bottom:18px}
+.hero-card{margin:0 auto 25px;padding:0;border:0}
+.painting-mat{display:inline-flex;vertical-align:top;align-items:center;justify-content:center;max-width:100%;margin:0 auto;padding:11px;background:#f6f3ec;border:1px solid #bfb9ad;box-shadow:0 1px 5px rgba(30,25,18,.12),0 7px 18px rgba(30,25,18,.045);line-height:0;text-decoration:none}
+.painting-mat img{display:block;width:auto;max-width:100%;height:auto;max-height:760px;object-fit:contain;border:1px solid rgba(70,63,52,.14)}
+.metadata{list-style:none;padding:0;text-align:center;line-height:1.95;max-width:850px;margin:0 auto}
+.metadata li{display:block;margin:0}
+.panel p{max-width:920px;margin:10px auto;line-height:1.6}
+.cultural-large,.cultural-compact{display:flex;justify-content:center;flex-wrap:wrap;align-items:stretch;gap:15px;margin:0 auto}
+.cultural-large>.tile{flex:0 1 265px;width:100%;max-width:265px}
+.cultural-compact>.tile{flex:0 1 180px;width:100%;max-width:180px}
+.tile{display:flex;flex-direction:column;border:1px solid #e3e5e8;background:white;color:#222;text-decoration:none;border-radius:7px;overflow:hidden;min-width:0}
+.tileimg{height:200px;background:#f6f6f6;display:flex;align-items:center;justify-content:center;padding:9px}
+.tileimg img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.tilecaption{padding:10px 8px 13px}
+.card-title{display:block;font-size:13px;font-weight:650;line-height:1.3}
+.card-source{display:block;font-size:11px;line-height:1.3;margin-top:3px}
+.card-source a{text-decoration:underline}
+.cultural-compact .tileimg{height:142px}
+.cultural-compact .tilecaption{padding:6px 7px 8px;line-height:1.3}
+.cultural-compact .card-title{font-size:12px}
+.cultural-compact .card-source{font-size:11px}
+.work-sequence-nav{max-width:1080px;margin:30px auto 10px;text-align:center}
+.sequence-nav-inner{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.site-footer{max-width:1180px;margin:42px auto 5px;padding:25px 18px;border-top:1px solid #e2e4e8;text-align:center;color:#777;font-size:14px}
+@media(max-width:580px){.site-header{padding:14px 10px 0}main.work-layout{padding:15px 10px}.hero,.panel{padding:20px 12px!important}.painting-mat{padding:7px}.sequence-nav-inner{flex-direction:column;align-items:stretch}.cultural-large>.tile{flex-basis:min(100%,265px)}.cultural-compact>.tile{flex-basis:min(100%,180px)}}
 </style>
 </head>
 <body>
@@ -90,43 +77,42 @@ section[data-role="related-works"] figure.ron-2021-drawing-card figcaption{width
 <!-- END GENERATED WORK SEQUENCE NAV -->
 </header>
 <main class="work-layout">
-<section class="ron-v3-primary-hero" data-role="primary-artwork">
+<section class="hero" data-role="primary-artwork">
 <h1>Aqua Apes</h1>
 <figure class="hero-card">
-<a class="work-hero-link" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/image-viewer.html?src=https%3A%2F%2Fraw.githubusercontent.com%2Fronenglish-archive%2FPainting-Heroes-1%2Fmain%2FRE-001593-Aqua-Apes.jpg" rel="noopener noreferrer" target="_blank">
-<img alt="Aqua Apes" class="work-hero" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/Painting-Heroes-1/main/RE-001593-Aqua-Apes.jpg"/>
+<a class="painting-mat" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/image-viewer.html?src=https%3A%2F%2Fraw.githubusercontent.com%2Fronenglish-archive%2FPainting-Heroes-1%2Fmain%2FRE-001593-Aqua-Apes.jpg" rel="noopener noreferrer" target="_blank">
+<img alt="Aqua Apes" class="mainpainting" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/Painting-Heroes-1/main/RE-001593-Aqua-Apes.jpg"/>
 </a>
 </figure>
-<ul class="work-meta" data-work-id="RE-001593">
+<ul class="metadata" data-work-id="RE-001593">
 <li><strong>Title:</strong> Aqua Apes</li>
 <li><strong>Date:</strong> 2021</li>
 <li><strong>Medium:</strong> Oil on canvas</li>
 <li><strong>Dimensions:</strong> 36 × 54 inches</li>
 <li><strong>Work ID:</strong> RE-001593</li>
-<li><strong>Signature:</strong> No signature observed in available documentation.</li>
+<li><strong>Signature:</strong> No signature visible in the available documentation.</li>
 <li><strong>Provenance:</strong> Artist's Personal Collection</li>
 </ul>
 </section>
 <!-- START GENERATED WORK SEQUENCE NAV -->
 <!-- END GENERATED WORK SEQUENCE NAV -->
-<section class="section-block">
-<h2>Exhibitions</h2>
+<section class="panel" data-role="exhibitions"><h2>Exhibitions</h2>
 <p><em>Brand Royalty</em>, Allouche Gallery, New York, New York, US, September 18–October 19, 2021.</p>
 <p><em>Living in Delusionville</em>, Mesa Contemporary Arts Museum, Mesa Arts Center, Mesa, Arizona, US, September 9, 2022–January 22, 2023.</p>
 <p><em>Inaugural Exhibition</em>, Allouche Gallery.</p>
 </section>
-<section class="section-block ron-pdoc-panel" data-role="cultural-artistic-references">
+<section class="panel" data-role="cultural-artistic-references">
 <h2>Cultural &amp; Artistic References</h2>
-<div class="ancillary-gallery documentation-grid ron-pdoc-items">
-<figure class="ancillary-figure ron-pdoc-tile" data-doc-role="cultural-artistic-references">
-<a href="../../../../images/Paintings/Web-Documentation3/pufnstuf.jpg" rel="noopener noreferrer" target="_blank">
+<div class="cultural-large">
+<div class="tile" data-doc-role="cultural-artistic-references">
+<a class="tileimg" href="../../../../images/Paintings/Web-Documentation3/pufnstuf.jpg" rel="noopener noreferrer" target="_blank">
 <img alt="H.R. Pufnstuf" loading="lazy" src="../../../../images/Paintings/Web-Documentation3/pufnstuf.jpg"/>
 </a>
-<figcaption>
+<div class="tilecaption">
 <span class="card-title">H.R. Pufnstuf</span>
 <span class="card-source"><a href="https://www.imdb.com/es/title/tt0063907/trivia/" rel="noopener noreferrer" target="_blank">IMDb</a></span>
-</figcaption>
-</figure>
+</div>
+</div>
 </div>
 </section>
 <!-- WORK-SEQUENCE-NAV-START -->
