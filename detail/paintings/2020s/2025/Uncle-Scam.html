@@ -104,15 +104,21 @@ const paintingData = {
   "notes": [],
   "workInProgress": [
     {
-      "title": "Uncle Scam 2 - Original Drawing",
+      "title": "",
+      "caption": "",
+      "alt": "Uncle Scam 2 original drawing",
       "image": "https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Mythical%20Beings/Mythical%20Humans/Uncle%20Scam%202%20ORIGINAL.jpg"
-    },
+    }
+  ],
+  "digitalWorks": [
     {
-      "title": "Uncle Scam 2 - Digitized Version (Black and White)",
+      "title": "Black and White",
+      "alt": "Uncle Scam 2 digitized version, black and white",
       "image": "https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Mythical%20Beings/Mythical%20Humans/Uncle%20Scam%202%20B%26W.jpg"
     },
     {
-      "title": "Uncle Scam 2 - Digitized Version (Color)",
+      "title": "Color",
+      "alt": "Uncle Scam 2 digitized version, color",
       "image": "https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Mythical%20Beings/Mythical%20Humans/Uncle%20Scam%202%20COLOR.jpg"
     }
   ],
@@ -206,7 +212,7 @@ function cards(where,arr,small,layoutClass){
   if(!c||!c.image)continue;
   const outer=el(c.url?'a':'div',small&&!layoutClass?'tile reference':'tile');
   if(c.url)external(outer,c.url);
-  const photo=el('div','tileimg'),img=el('img');img.loading='lazy';img.src=c.image;img.alt=c.title||'Artwork documentation photograph';
+  const photo=el('div','tileimg'),img=el('img');img.loading='lazy';img.src=c.image;img.alt=(valuePresent(c.alt)?c.alt:(c.title||'Artwork documentation photograph'));
   photo.append(img);outer.append(photo);
   if(valuePresent(c.title)||valuePresent(c.caption)){
    const label=el('div','tilecaption');
@@ -249,6 +255,7 @@ list('exhibitions','Exhibitions',d.exhibitions);
 list('literature','Literature',d.literature);
 list('notes','Notes',d.notes);
 cardSection('work-in-progress','Work in Progress',d.workInProgress);
+cardSection('digital-works','Digital Works',d.digitalWorks);
 cardSection('photo-gallery','Photo Gallery',d.photoGallery);
 cardSection('reference-materials','Reference Materials',d.referenceMaterials);
 const groups=[['Used in the Creation of This Painting',d.relatedWorks?.usedInCreation],['Related Paintings',d.relatedWorks?.paintings],['Related Drawings & Sketches',d.relatedWorks?.drawings],['Artist-Created Graphic Designs',d.relatedWorks?.graphicDesigns],['Other Related Works',d.relatedWorks?.other]];
