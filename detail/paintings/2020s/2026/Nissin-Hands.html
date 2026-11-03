@@ -3,63 +3,65 @@
 <link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nissin Hands | Ron English Catalogue Raisonné</title>
 <style>
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:#222;background:#f7f6f3;font-family:system-ui,-apple-system,Segoe UI,sans-serif;text-align:center;font-size:15px;line-height:1.6}
-a{color:inherit} .wrapper{max-width:1180px;margin:0 auto;padding:26px 18px 42px}
+
+/* Museum Frame V3 - one authoritative layout block, 2026-11-01.
+   Compact cultural figures have zero native margins: 5 x 180px + 4 x 15px = 960px. */
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:#222;background:#f7f6f3;font:15px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+a{color:inherit}.wrapper{max-width:1180px;margin:0 auto;padding:26px 18px 42px}
 .topnav,.sequence,.jumplinks{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:10px auto 20px}
-.pill,.jumplinks a{border:1px solid #dadde2;border-radius:99px;padding:8px 14px;font-size:13px;text-decoration:none;background:white}
+.pill,.jumplinks a{display:inline-flex;align-items:center;justify-content:center;border:1px solid #dadde2;border-radius:99px;padding:8px 14px;font-size:13px;text-decoration:none;background:#fff}
 .pill:hover,.jumplinks a:hover{background:#f3f4f6}
-.hero,.panel{margin:25px auto;padding:26px 24px;background:white;border:1px solid #e1e4e8;border-radius:18px;max-width:1080px;box-shadow:0 5px 18px #00000008}
+.hero,.panel{width:100%;max-width:1080px;box-sizing:border-box;margin:25px auto;padding:26px 24px;background:#fff;border:1px solid #e1e4e8;border-radius:18px;box-shadow:0 5px 18px #00000008}
 .hero{border:1px solid #ccc2b1;outline:1px solid #eae5db;outline-offset:-11px;border-radius:3px;padding:38px 28px;box-shadow:0 15px 35px #473b2712}
-h1,h2,h3{font-family:Georgia,serif;font-weight:400;margin:0} h1{font-size:clamp(32px,5vw,47px);margin-bottom:24px} h2{font-size:23px;margin-bottom:18px} h3{font-size:19px;margin:8px 0 18px}
-.mainpainting{width:min(100%,680px);height:auto;max-height:760px;object-fit:contain;display:block;margin:0 auto 25px}
-.metadata{line-height:1.95;max-width:850px;margin:0 auto} .metaitem{text-align:center}
-.lead{max-width:920px;margin:0 auto 10px;color:#5c5f66;font-size:14px}
-.panel p, .panel li{max-width:920px;margin-left:auto;margin-right:auto} .simplelist{list-style:none;padding:0;margin:0 auto;max-width:920px} .simplelist li{margin:10px auto}
-.subsection{margin-top:18px} .subsection:first-of-type{margin-top:0}
-.grid4,.grid6{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:15px;margin:0 auto}
-.grid6{gap:10px}
-.tile{display:block;border:1px solid #e3e5e8;background:white;color:#222;text-decoration:none;border-radius:7px;overflow:hidden;min-width:0}
-.grid4>.tile{flex:0 0 calc((100% - 45px)/4);max-width:calc((100% - 45px)/4)} .grid6>.tile{flex:0 0 calc((100% - 50px)/6);max-width:calc((100% - 50px)/6)}
-.tileimg{height:180px;background:#f6f6f6;display:flex;align-items:center;justify-content:center;padding:9px} .tileimg img{width:100%;height:100%;object-fit:contain}
-.tilecaption{padding:10px 8px 13px} .tilename{display:block;font-size:13px;font-weight:650;line-height:1.3} .tilesub{display:block;font-size:11px;color:#687080;margin-top:5px}
-.reference .tileimg{height:120px;padding:8px} .reference .tilename{font-size:11px} .reference .tilesub{font-size:10px} .reference .tilecaption{padding:7px 5px 9px}
-.tile:hover{border-color:#a6aeba;box-shadow:0 5px 15px #00000010} footer{font-size:14px;color:#777;margin:42px auto 5px;padding:25px 0;border-top:1px solid #e2e4e8}
-@media(max-width:820px){.grid4>.tile{flex-basis:calc((100% - 30px)/3);max-width:calc((100% - 30px)/3)} .grid6>.tile{flex-basis:calc((100% - 30px)/4);max-width:calc((100% - 30px)/4)}}
-@media(max-width:580px){.wrapper{padding:15px 10px} .hero,.panel{padding:20px 12px} .grid4{gap:9px} .grid6{gap:7px} .grid4>.tile{flex-basis:calc((100% - 9px)/2);max-width:calc((100% - 9px)/2)} .grid6>.tile{flex-basis:calc((100% - 14px)/3);max-width:calc((100% - 14px)/3)} .tileimg{height:145px} .reference .tileimg{height:93px}}
-
-/* Consistent Museum Frame galleries; incomplete final rows center. */
-.grid4,.grid6{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:15px;margin:0 auto}
-.grid6{gap:10px}
-.grid4>.tile{flex:0 0 calc((100% - 45px)/4);max-width:calc((100% - 45px)/4)}
-.grid6>.tile{flex:0 0 calc((100% - 50px)/6);max-width:calc((100% - 50px)/6)}
-@media(max-width:820px){.grid4>.tile{flex-basis:calc((100% - 30px)/3);max-width:calc((100% - 30px)/3)} .grid6>.tile{flex-basis:calc((100% - 30px)/4);max-width:calc((100% - 30px)/4)}}
-@media(max-width:580px){.grid4{gap:9px}.grid6{gap:7px}.grid4>.tile{flex-basis:calc((100% - 9px)/2);max-width:calc((100% - 9px)/2)}.grid6>.tile{flex-basis:calc((100% - 14px)/3);max-width:calc((100% - 14px)/3)}}
-.subsection{margin:18px 0 28px}.subsection:last-child{margin-bottom:0}.subsection h3{font-family:Georgia,serif;font-size:19px;font-weight:400;margin:0 0 20px}
-.simplelist{list-style:none;padding:0;margin:0 auto;max-width:920px}.simplelist li{margin:10px 0} 
-/* Subtle, consistent inner mat defining the painting’s actual edges. */
-.painting-mat{display:inline-flex;vertical-align:top;align-items:center;justify-content:center;max-width:100%;margin:0 auto 25px;padding:11px;background:#f6f3ec;border:1px solid #bfb9ad;box-shadow:0 1px 5px rgba(30,25,18,.12),0 7px 18px rgba(30,25,18,.045);line-height:0;text-decoration:none}
-.painting-mat .mainpainting{display:block;width:auto;max-width:100%;height:auto;max-height:760px;margin:0;object-fit:contain;border:1px solid rgba(70,63,52,.14)}
-@media(max-width:580px){.painting-mat{padding:7px}}
-
-/* V3 — composite works: preserve panel order in the array and override arrangement case by case. */
+h1,h2,h3{font-family:Georgia,serif;font-weight:400;margin:0}h1{font-size:clamp(32px,5vw,47px);margin-bottom:24px}h2{font-size:23px;margin-bottom:18px}h3{font-size:19px;margin:8px 0 18px}
+.metadata{line-height:1.95;max-width:850px;margin:0 auto}.metaitem{text-align:center}
+.panel p,.panel li{max-width:920px;margin-left:auto;margin-right:auto}.simplelist{list-style:none;padding:0;margin:0 auto;max-width:920px}.simplelist li{margin:10px auto}
+.subsection{margin:18px 0 28px}.subsection:first-of-type{margin-top:0}.subsection:last-child{margin-bottom:0}.subsection h3{margin:0 0 20px}
+.painting-mat{display:inline-flex;vertical-align:top;align-items:center;justify-content:center;max-width:100%;margin:0 auto 25px;padding:11px;background:#f6f3ec;border:1px solid #bfb9ad;box-shadow:0 1px 5px #1e19121f,0 7px 18px #1e19120b;line-height:0;text-decoration:none}
+.mainpainting,.painting-mat .mainpainting{display:block;width:auto;max-width:100%;height:auto;max-height:760px;margin:0;object-fit:contain;border:1px solid #463f3424}
 .panel-artworks{display:grid;gap:16px;max-width:960px;margin:0 auto 24px;align-items:center;justify-items:center}
-.panel-artworks.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.panel-artworks.four{grid-template-columns:repeat(2,minmax(0,1fr))}
-.panel-artworks.three{grid-template-columns:repeat(2,minmax(0,1fr))}
+.panel-artworks.two,.panel-artworks.three,.panel-artworks.four{grid-template-columns:repeat(2,minmax(0,1fr))}
 .panel-artworks.three>.painting-mat:first-child{grid-column:1/-1;width:min(100%,460px)}
-.panel-artworks>.painting-mat{width:100%;margin:0;min-width:0}
-.panel-artworks .mainpainting{width:100%;max-height:550px}
-/* Related Works: each image and title/optional note live inside one subtle card. */
-.related-gallery{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:15px}
-.related-gallery>.tile{flex:0 1 265px;width:265px;max-width:100%;border:1px solid #ded9d0;border-radius:12px;box-shadow:0 2px 8px #0000000b}
-.related-gallery>.tile .tileimg{height:192px}
-.related-gallery>.tile .tilecaption{border-top:1px solid #ece9e3;background:#fff;padding:10px 10px 12px}
-.related-gallery>.tile .tilename{font-weight:600}
-/* Cultural references: one to three can be larger; four or more remain compact. */
-.cultural-large>.tile{flex:0 1 220px;max-width:220px;width:100%}
-.cultural-compact{max-width:960px;margin-left:auto;margin-right:auto}.cultural-compact>.tile{flex:0 1 180px;max-width:180px;width:100%}
-.cultural-large .tileimg{height:158px}.cultural-compact .tileimg{height:142px}
-@media(max-width:580px){.panel-artworks{gap:9px}.panel-artworks.two,.panel-artworks.three,.panel-artworks.four{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-artworks.three>.painting-mat:first-child{width:min(100%,350px)}.cultural-large>.tile{flex-basis:min(100%,220px)}.cultural-compact>.tile{flex-basis:min(100%,180px)}.related-gallery>.tile{flex-basis:min(100%,265px)}}
+.panel-artworks>.painting-mat{width:100%;margin:0;min-width:0}.panel-artworks .mainpainting{width:100%;max-height:550px}
+.grid4,.grid6,.related-gallery,.cultural-large,.cultural-compact,.video-gallery,.work-documentary{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:15px;margin:0 auto}
+.tile{display:flex;flex-direction:column;border:1px solid #e3e5e8;background:#fff;color:#222;text-decoration:none;border-radius:7px;overflow:hidden;min-width:0}
+.grid4>.tile,.grid6>.tile,.work-documentary>.tile{flex:0 1 220px;width:100%;max-width:220px}
+.related-gallery>.tile{flex:0 1 265px;width:100%;max-width:265px;border-color:#ded9d0;border-radius:12px;box-shadow:0 2px 8px #0000000b}
+.cultural-large>.tile{flex:0 1 220px;width:100%;max-width:220px}
+.cultural-compact{width:100%;max-width:960px}.cultural-compact>.tile{flex:0 0 180px;width:180px;max-width:180px;min-width:0;margin:0;box-sizing:border-box}
+.tileimg{height:180px;background:#f6f6f6;display:flex;align-items:center;justify-content:center;padding:9px;text-decoration:none}
+.tileimg img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.related-gallery .tileimg{height:192px}.cultural-large .tileimg{height:158px}.cultural-compact .tileimg{height:142px}
+.tilecaption{padding:10px 8px 13px;overflow-wrap:anywhere}.tilename,.card-title{display:block;font-size:13px;font-weight:650;line-height:1.3}.tilesub,.card-source,.card-detail-text{display:block;font-size:11px;line-height:1.3;color:#687080;margin-top:4px}
+.related-gallery .tilecaption{border-top:1px solid #ece9e3;padding:10px 10px 12px;line-height:1.45}
+.cultural-compact .tilecaption{padding:6px 7px 8px;line-height:1.3}.cultural-compact .tilename{font-size:12px}.cultural-compact .tilesub{font-size:11px;margin-top:3px}
+.tile:hover{border-color:#a6aeba;box-shadow:0 5px 15px #00000010}
+/* Owner-approved compact video poster treatment, High Speed Homer retest */
+.video-gallery>.video-tile{box-sizing:border-box;flex:0 1 265px;width:100%;max-width:265px;min-width:0;margin:0;padding:0;overflow:hidden;border:1px solid #e0e3e8;border-radius:9px;background:#fff}
+.video-poster{position:relative;display:flex;align-items:center;justify-content:center;height:165px;padding:8px;background:#f6f6f6;overflow:hidden;text-decoration:none}
+.video-poster img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
+.video-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:rgba(20,20,20,.76);color:#fff;font-size:22px;line-height:1;pointer-events:none}
+.video-tile figcaption{margin:0;padding:10px 8px 12px;border-top:1px solid #e8e8e8;font-size:13px;line-height:1.4;text-align:center}.video-tile figcaption a{text-decoration:underline}
+.sequence{margin:30px auto 10px}.sequence-inner{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+footer{font-size:14px;color:#777;margin:42px auto 5px;padding:25px 0;border-top:1px solid #e2e4e8}
+@media(max-width:580px){.wrapper{padding:15px 10px}.hero,.panel{padding:20px 12px}.painting-mat{padding:7px}.panel-artworks{gap:9px}.panel-artworks.three>.painting-mat:first-child{width:min(100%,350px)}.grid4>.tile,.grid6>.tile,.related-gallery>.tile,.cultural-large>.tile,.cultural-compact>.tile,.video-gallery>.video-tile{flex-basis:min(100%,var(--card-width,220px))}.related-gallery>.tile,.video-gallery>.video-tile{--card-width:265px}.cultural-compact>.tile{--card-width:180px}}
+
+/* Museum Frame V3 desktop display treatment: owner-approved Batbrain V2, 2026-11-03.
+   Scale the complete detail presentation, not source images or underlying card ratios.
+   Keep desktop source geometry above unchanged; leave mobile/tablet at normal scale. */
+@media (min-width:801px) {
+  body { zoom:0.5; }
+  .topnav .pill { font-size:14.6px; } /* +12% from 13px */
+  .related-gallery .tilename { font-size:13.91px; } /* +7% from 13px */
+  .cultural-large .tilename { font-size:13.91px; } /* +7% from 13px */
+  .cultural-compact .tilename { font-size:12.84px; } /* +7% from 12px */
+  .wrapper { padding-bottom:8px; }
+  .topnav { margin-bottom:6px; }
+  #catalogue-content > .hero:first-child { margin-top:8px; }
+  #previous-next { margin-bottom:6px; }
+  footer { margin-top:6px; padding-top:12px; }
+}
 </style></head><body><div class="wrapper">
 <!-- Catalogue navigation — approved V3 -->
 <nav class="topnav"><a class="pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue home</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1970s/paintings/1970s.html">1960s–1970s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1980s/paintings/1980s.html">1980s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1990s/paintings/1990s.html">1990s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-2000s/paintings/2000s.html">2000s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-2010s/paintings/2010s.html">2010s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-2020s/paintings/2020s.html">2020s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a></nav>
@@ -171,17 +173,27 @@ const list=(id,title,entries)=>{
 };
 function cards(where,arr,small,layoutClass){
  if(!Array.isArray(arr)||!arr.length)return false;
- const grid=el('div',layoutClass|| (small?'grid6':'grid4'));let count=0;
+ const grid=el('div',layoutClass||(small?'grid6':'grid4'));let count=0;
  for(const c of arr){
   if(!c||!c.image)continue;
-  const outer=el('div',small&&!layoutClass?'tile reference':'tile');
-  const photo=el('div','tileimg'),img=el('img');img.loading='lazy';img.src=c.image;img.alt=c.title||'Artwork documentation photograph';
-  photo.append(img);
-  const imageA=el('a','');external(imageA,c.imageUrl||c.imageLink||c.image);imageA.append(photo);outer.append(imageA);
-  if(valuePresent(c.title)||valuePresent(c.caption)||valuePresent(c.sourceUrl)||valuePresent(c.sourceLabel)||Array.isArray(c.extraLinks)){
-   const label=el('div','tilecaption');
-   if(valuePresent(c.title)){const t=el((c.titleUrl||c.url)?'a':'span','tilename',c.title);if(c.titleUrl||c.url)external(t,c.titleUrl||c.url);label.append(t);}
-   if(valuePresent(c.caption)){const t=el('span','tilesub',c.caption);label.append(t);}if(valuePresent(c.sourceUrl)){const a=el('a','tilesub',c.sourceLabel||'Source');external(a,c.sourceUrl);label.append(a);}else if(valuePresent(c.sourceLabel)){label.append(el('span','tilesub',c.sourceLabel));}if(Array.isArray(c.extraLinks)){for(const l of c.extraLinks){const a=el('a','tilesub',l.label||'Source');external(a,l.url);label.append(a);}}
+  const outer=el('figure','tile');outer.style.margin='0';
+  const imageHref=c.imageUrl||c.imageLink||c.image;
+  const imageA=el('a','tileimg');external(imageA,imageHref);
+  const img=el('img');img.loading='lazy';img.src=c.image;img.alt=c.alt||c.title||'Documentary image';imageA.append(img);outer.append(imageA);
+  if(valuePresent(c.title)||valuePresent(c.caption)||valuePresent(c.sourceLabel)||valuePresent(c.sourceUrl)){
+   const label=el('figcaption','tilecaption');
+   if(valuePresent(c.title)){
+    const nm=el('span','tilename');
+    if(valuePresent(c.url)){const link=el('a','',c.title);external(link,c.url);nm.append(link);}else nm.textContent=c.title;
+    label.append(nm);
+   }
+   if(valuePresent(c.caption))label.append(el('span','tilesub',c.caption));
+   if(valuePresent(c.sourceLabel)||valuePresent(c.sourceUrl)){
+    const source=el('span','card-source');
+    if(valuePresent(c.sourceUrl)){const a=el('a','',c.sourceLabel||'Source');external(a,c.sourceUrl);source.append(a);}
+    else source.textContent=c.sourceLabel;
+    label.append(source);
+   }
    outer.append(label);
   }
   grid.append(outer);count++;
@@ -221,13 +233,23 @@ list('notes','Notes',d.notes);
 cardSection('work-in-progress','Work in Progress',d.workInProgress);
 cardSection('photo-gallery','Photo Gallery',d.photoGallery);
 cardSection('reference-materials','Reference Materials',d.referenceMaterials);
-const groups=[['Used in the Creation of This Painting',d.relatedWorks?.usedInCreation],['Related Paintings',d.relatedWorks?.paintings],['Related Drawings & Sketches',d.relatedWorks?.drawings],['Artist-Created Graphic Designs',d.relatedWorks?.graphicDesigns],['Other Related Works',d.relatedWorks?.other]];
+const groups=[['Used in the Creation of This Painting',d.relatedWorks?.usedInCreation],['Earlier Paintings Incorporated into This Painting',d.relatedWorks?.earlierPaintingsIncorporated],['Related Paintings',d.relatedWorks?.paintings],['Related Drawings & Sketches',d.relatedWorks?.drawings],['Artist-Created Graphic Designs',d.relatedWorks?.graphicDesigns],['Other Related Works',d.relatedWorks?.other]];
 if(groups.some(([_,a])=>Array.isArray(a)&&a.some(x=>x&&x.image))){
  const s=section('related-works','Related Works by Ron English');
  for(const [title,entries] of groups){if(!Array.isArray(entries)||!entries.some(x=>x&&x.image))continue;
  const div=el('div','subsection');div.append(el('h3','',title));cards(div,entries,false,'related-gallery');s.append(div);}
 }
+cardSection('artist-created-graphic-designs','Artist-Created Graphic Designs',d.artistCreatedGraphicDesigns);
 cardSection('cultural-references','Cultural & Artistic References',d.culturalReferences,true);
+if(Array.isArray(d.videos)&&d.videos.length){
+ const verified=d.videos.filter(v=>v&&v.url&&v.image);
+ if(verified.length){const vs=section('videos','Videos'),gallery=el('div','video-gallery');
+  for(const v of verified){const fig=el('figure','video-tile'),a=el('a','video-poster');fig.style.margin='0';external(a,v.url);
+   a.setAttribute('aria-label','Watch video on YouTube');const img=el('img');img.src=v.image;img.alt=v.alt||'Video thumbnail';a.append(img,el('span','video-play','▶'));a.lastChild.setAttribute('aria-hidden','true');
+   fig.append(a);const caption=el('figcaption'),link=el('a','',v.caption||'Watch on YouTube');external(link,v.url);caption.append(link);fig.append(caption);gallery.append(fig);
+  }vs.append(gallery);
+ }
+}
 const seq=document.getElementById('previous-next');
 for(const item of [d.previous,d.next])if(item&&item.url){const a=el('a','pill',item.label||'View painting');a.href=item.url;seq.append(a);}
 })();</script></body></html>
