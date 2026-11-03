@@ -77,7 +77,7 @@ h1,h2,h3{font-family:Georgia,serif;font-weight:400;margin:0} h1{font-size:clamp(
 const paintingData = {
   "title": "Who I with Travie McCoy",
   "image": "https://raw.githubusercontent.com/ronenglish-archive/Painting-Heroes-2/main/RE-001590-Who-I-with-Travie-McCoy.png",
-  "imageLink": "https://raw.githubusercontent.com/ronenglish-archive/Painting-Heroes-2/main/RE-001590-Who-I-with-Travie-McCoy.png",
+  "imageLink": "https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/image-viewer.html?src=https%3A%2F%2Fraw.githubusercontent.com%2Fronenglish-archive%2FPainting-Heroes-2%2Fmain%2FRE-001590-Who-I-with-Travie-McCoy.png",
   "panels": [],
   "panelLayout": "auto",
   "metadata": {
@@ -231,15 +231,33 @@ const list=(id,title,entries)=>{
 function cards(where,arr,small,layoutClass){
  if(!Array.isArray(arr)||!arr.length)return false;
  const grid=el('div',layoutClass|| (small?'grid6':'grid4'));let count=0;
- for(const c of arr){
+ for(const c of arr){  /* BATCH18_RELATED_SPLIT_LINKS */
   if(!c||!c.image)continue;
-  const outer=el(c.url?'a':'div',small&&!layoutClass?'tile reference':'tile');
-  if(c.url)external(outer,c.url);
-  const photo=el('div','tileimg'),img=el('img');img.loading='lazy';img.src=c.image;img.alt=c.title||'Artwork documentation photograph';
-  photo.append(img);outer.append(photo);
+  if(layoutClass==='related-gallery'){
+   const box=el('figure','tile');box.style.margin='0';
+   const imageAnchor=el('a','tileimg');external(imageAnchor,c.imageUrl||c.imageLink||c.image);
+   const artworkImage=el('img');artworkImage.loading='lazy';artworkImage.src=c.image;artworkImage.alt=c.title||'Related artwork';
+   imageAnchor.append(artworkImage);box.append(imageAnchor);
+   if(valuePresent(c.title)||valuePresent(c.caption)){
+    const figCaption=el('figcaption','tilecaption');
+    if(valuePresent(c.title)){
+     const nameHolder=el('span','tilename'),destination=c.titleUrl||c.url;
+     if(destination){const titleAnchor=el('a','',c.title);external(titleAnchor,destination);nameHolder.append(titleAnchor);}
+     else nameHolder.textContent=c.title;
+     figCaption.append(nameHolder);
+    }
+    if(valuePresent(c.caption))figCaption.append(el('span','tilesub',c.caption));
+    box.append(figCaption);
+   }
+   grid.append(box);count++;continue;
+  }
+  if(!c||!c.image)continue;
+  const outer=el('div',small&&!layoutClass?'tile reference':'tile');
+  const photo=el('a','tileimg'),img=el('img');img.loading='lazy';img.src=c.image;img.alt=c.title||'Artwork documentation photograph';
+  external(photo,c.imageUrl||c.imageLink||c.image);photo.append(img);outer.append(photo);
   if(valuePresent(c.title)||valuePresent(c.caption)){
    const label=el('div','tilecaption');
-   if(valuePresent(c.title)){const t=el(c.titleUrl?'a':'span','tilename',c.title);if(c.titleUrl)external(t,c.titleUrl);label.append(t);}
+   if(valuePresent(c.title)){const titleDest=c.titleUrl||c.url;const t=el(titleDest?'a':'span','tilename',c.title);if(titleDest)external(t,titleDest);label.append(t);}
    if(valuePresent(c.caption)){const t=el('span','tilesub',c.caption);if(c.sourceUrl){const a=el('a','',c.sourceLabel||'Source');external(a,c.sourceUrl);t.append(' ',a);}label.append(t);}if(Array.isArray(c.extraLinks)){for(const l of c.extraLinks){const a=el('a','tilesub',l.label||'Source');external(a,l.url);label.append(a);}}
    outer.append(label);
   }

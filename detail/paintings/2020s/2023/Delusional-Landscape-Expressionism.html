@@ -233,7 +233,26 @@ const list=(id,title,entries)=>{
 function cards(where,arr,small,layoutClass){
  if(!Array.isArray(arr)||!arr.length)return false;
  const grid=el('div',layoutClass|| (small?'grid6':'grid4'));let count=0;
- for(const c of arr){
+ for(const c of arr){  /* BATCH18_RELATED_SPLIT_LINKS */
+  if(!c||!c.image)continue;
+  if(layoutClass==='related-gallery'){
+   const box=el('figure','tile');box.style.margin='0';
+   const imageAnchor=el('a','tileimg');external(imageAnchor,c.imageUrl||c.imageLink||c.image);
+   const artworkImage=el('img');artworkImage.loading='lazy';artworkImage.src=c.image;artworkImage.alt=c.title||'Related artwork';
+   imageAnchor.append(artworkImage);box.append(imageAnchor);
+   if(valuePresent(c.title)||valuePresent(c.caption)){
+    const figCaption=el('figcaption','tilecaption');
+    if(valuePresent(c.title)){
+     const nameHolder=el('span','tilename'),destination=c.titleUrl||c.url;
+     if(destination){const titleAnchor=el('a','',c.title);external(titleAnchor,destination);nameHolder.append(titleAnchor);}
+     else nameHolder.textContent=c.title;
+     figCaption.append(nameHolder);
+    }
+    if(valuePresent(c.caption))figCaption.append(el('span','tilesub',c.caption));
+    box.append(figCaption);
+   }
+   grid.append(box);count++;continue;
+  }
   if(!c||!c.image)continue;
   const outer=el(c.url?'a':'div',small&&!layoutClass?'tile reference':'tile');
   if(c.url)external(outer,c.url);

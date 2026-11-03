@@ -77,7 +77,7 @@ h1,h2,h3{font-family:Georgia,serif;font-weight:400;margin:0} h1{font-size:clamp(
 const paintingData = {
   "title": "Star Skull Positive/Negative Stencil",
   "image": "https://raw.githubusercontent.com/ronenglish-archive/Painting-Heroes-2/main/RE-001723-Star-Skull-Positive-Negative-Stencil.png",
-  "imageLink": "https://raw.githubusercontent.com/ronenglish-archive/Painting-Heroes-2/main/RE-001723-Star-Skull-Positive-Negative-Stencil.png",
+  "imageLink": "https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/image-viewer.html?src=https%3A%2F%2Fraw.githubusercontent.com%2Fronenglish-archive%2FPainting-Heroes-2%2Fmain%2FRE-001723-Star-Skull-Positive-Negative-Stencil.png",
   "panels": [],
   "panelLayout": "auto",
   "metadata": {
@@ -166,14 +166,15 @@ function cards(where,arr,small,layoutClass){
  const grid=el('div',layoutClass|| (small?'grid6':'grid4'));let count=0;
  for(const c of arr){
   if(!c||!c.image)continue;
-  const outer=el(c.url?'a':'div',small&&!layoutClass?'tile reference':'tile');
-  if(c.url)external(outer,c.url);
+  const outer=el('div',small&&!layoutClass?'tile reference':'tile');
   const photo=el('div','tileimg'),img=el('img');img.loading='lazy';img.src=c.image;img.alt=c.title||'Artwork documentation photograph';
-  photo.append(img);outer.append(photo);
-  if(valuePresent(c.title)||valuePresent(c.caption)){
+  photo.append(img);
+  const imageA=el('a','');external(imageA,c.imageUrl||c.imageLink||c.image);imageA.append(photo);outer.append(imageA);
+  if(valuePresent(c.title)||valuePresent(c.caption)||valuePresent(c.sourceUrl)||valuePresent(c.sourceLabel)||Array.isArray(c.extraLinks)){
    const label=el('div','tilecaption');
-   if(valuePresent(c.title))label.append(el('span','tilename',c.title));
+   if(valuePresent(c.title)){const t=el(c.titleUrl||c.url?'a':'span','tilename',c.title);if(c.titleUrl||c.url)external(t,c.titleUrl||c.url);label.append(t);}
    if(valuePresent(c.caption))label.append(el('span','tilesub',c.caption));
+   if(valuePresent(c.sourceUrl)){const a=el('a','tilesub',c.sourceLabel||'Source');external(a,c.sourceUrl);label.append(a);}else if(valuePresent(c.sourceLabel)){label.append(el('span','tilesub',c.sourceLabel));}
    outer.append(label);
   }
   grid.append(outer);count++;

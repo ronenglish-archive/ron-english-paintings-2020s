@@ -188,6 +188,30 @@ function cards(where,arr,small,layoutClass){
  const grid=el('div',layoutClass|| (small?'grid6':'grid4'));let count=0;
  for(const c of arr){
   if(!c||!c.image)continue;
+  /* BATCH20_CULTURAL_INDEPENDENT_LINKS */
+  if(layoutClass==='grid4 cultural-large'||layoutClass==='grid6 cultural-compact'){
+   const box=el('figure','tile');box.style.margin='0';
+   const imageLink=el('a','tileimg');external(imageLink,c.imageUrl||c.imageLink||c.url||c.image);
+   const artworkImage=el('img');artworkImage.loading='lazy';artworkImage.src=c.image;artworkImage.alt=c.title||'Cultural reference';
+   imageLink.append(artworkImage);box.append(imageLink);
+   if(valuePresent(c.title)||valuePresent(c.caption)||valuePresent(c.sourceUrl)||Array.isArray(c.extraLinks)){
+    const cap=el('figcaption','tilecaption');
+    if(valuePresent(c.title)){
+     const destination=c.titleUrl||c.url;
+     if(destination){const name=el('a','tilename',c.title);external(name,destination);cap.append(name);}
+     else cap.append(el('span','tilename',c.title));
+    }
+    if(valuePresent(c.caption))cap.append(el('span','tilesub',c.caption));
+    if(valuePresent(c.sourceUrl)){
+     const src=el('a','tilesub',c.sourceLabel||'Source');external(src,c.sourceUrl);cap.append(src);
+    }
+    if(Array.isArray(c.extraLinks))for(const l of c.extraLinks){
+     if(l&&l.url){const x=el('a','tilesub',l.label||'Source');external(x,l.url);cap.append(x);}
+    }
+    box.append(cap);
+   }
+   grid.append(box);count++;continue;
+  }
   const outer=el(c.url?'a':'div',small&&!layoutClass?'tile reference':'tile');
   if(c.url)external(outer,c.url);
   const photo=el('div','tileimg'),img=el('img');img.loading='lazy';img.src=c.image;img.alt=c.title||'Artwork documentation photograph';
