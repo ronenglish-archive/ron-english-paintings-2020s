@@ -53,7 +53,7 @@ footer{font-size:14px;color:#777;margin:42px auto 5px;padding:25px 0;border-top:
    Scale the complete detail presentation, not source images or underlying card ratios.
    Keep desktop source geometry above unchanged; leave mobile/tablet at normal scale. */
 @media (min-width:801px) {
-  body { zoom:0.5; }
+  /* Read-only preview: original half-page zoom disabled */
   .topnav .pill { font-size:14.6px; } /* +12% from 13px */
   .related-gallery .tilename { font-size:13.91px; } /* +7% from 13px */
   .cultural-large .tilename { font-size:13.91px; } /* +7% from 13px */
@@ -85,6 +85,66 @@ section.preserved-documentary[data-role="related-works"] a.ron-2021-drawing-thum
 section.preserved-documentary[data-role="related-works"] figure img{display:block;width:auto;height:auto;max-width:100%;max-height:190px;margin:0;object-fit:contain;border:0;box-shadow:none}
 section.preserved-documentary[data-role="related-works"] figure figcaption{display:block;width:100%;margin:0;padding:10px 4px 4px;text-align:center;line-height:1.45;overflow-wrap:anywhere;font-size:13.91px}
 section.preserved-documentary[data-role="related-works"] figure figcaption a{display:inline;color:inherit;text-decoration:underline}
+
+/* RON-2020S-JS-APPROVED-V5-GUARDED-V1 START */
+/* Museum Frame V3 Compact 100% Preview CSS
+   Preview-only external stylesheet for six-painting pilot.
+   Leaves source files unchanged; intended to approximate owner-approved Cricket/Batbrain/
+   America Triptych/High Speed Homer/Uncle Scam previews at 100% browser zoom. */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0 !important;color:#222;background:#f7f6f3;font:16.2px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif !important;text-align:center}
+a{color:inherit}
+.site-header,.wrapper{max-width:590px !important;margin-left:auto !important;margin-right:auto !important}
+.site-header{padding:12px 10px 0 !important}
+.wrapper{padding:0 10px 18px !important}
+main.wrapper,#catalogue-content{max-width:590px !important;margin:0 auto !important;padding:0 !important}
+.topnav,.sequence,.sequence-inner,.jumplinks{display:flex !important;justify-content:center !important;gap:6px !important;flex-wrap:wrap !important;margin:8px auto 10px !important}
+.pill,.jumplinks a,.sequence a{display:inline-flex !important;align-items:center !important;justify-content:center !important;border:1px solid #dadde2 !important;border-radius:999px !important;padding:6px 11px !important;font-size:12.5px !important;line-height:1.2 !important;text-decoration:none !important;background:#fff !important}
+.pill:hover,.jumplinks a:hover,.sequence a:hover{background:#f3f4f6 !important}
+.hero,.panel{width:100% !important;max-width:540px !important;box-sizing:border-box !important;margin:12px auto !important;padding:20px 16px !important;background:#fff !important;border:1px solid #e1e4e8 !important;border-radius:16px !important;box-shadow:0 5px 18px #00000008 !important}
+.hero{border:1px solid #ccc2b1 !important;outline:1px solid #eae5db !important;outline-offset:-10px !important;border-radius:3px !important;box-shadow:0 12px 28px #473b2710 !important}
+h1,h2,h3{font-family:Georgia,serif !important;font-weight:400 !important;margin:0 !important}
+h1{font-size:32.5px !important;line-height:1.2 !important;margin-bottom:16px !important}
+h2{font-size:22px !important;line-height:1.25 !important;margin-bottom:12px !important}
+h3{font-size:18.6px !important;line-height:1.25 !important;margin:4px 0 12px !important}
+.painting-mat{display:inline-flex !important;align-items:center !important;justify-content:center !important;vertical-align:top !important;max-width:100% !important;margin:0 auto 14px !important;padding:6px !important;background:#f6f3ec !important;border:1px solid #bfb9ad !important;box-shadow:0 1px 5px #1e19121f,0 7px 18px #1e19120b !important;line-height:0 !important;text-decoration:none !important}
+.mainpainting,.painting-mat .mainpainting{display:block !important;width:auto !important;max-width:100% !important;height:auto !important;max-height:380px !important;margin:0 !important;object-fit:contain !important;border:1px solid #463f3424 !important}
+.metadata{max-width:480px !important;margin:0 auto !important;line-height:1.8 !important;list-style:none !important;padding:0 !important}
+.metaitem,.metadata li{font-size:16.2px !important;text-align:center !important;list-style:none !important;margin:0 !important;padding:0 !important}
+.panel p,.panel li,.panel .source-section-content{max-width:480px !important;margin-left:auto !important;margin-right:auto !important;font-size:16.2px !important}
+.panel ul.simplelist,.panel .source-section-content ul{list-style:none !important;padding:0 !important;margin:0 auto !important;max-width:480px !important}
+.panel .source-section-content li,.panel ul.simplelist li{margin:8px auto !important}
+.subsection,.ron-related-subsection{margin:14px 0 18px !important}
+.grid4,.grid6,.related-gallery,.ron-related-gallery,.cultural-large,.cultural-compact,.video-gallery,.work-documentary{display:flex !important;flex-wrap:wrap !important;justify-content:center !important;align-items:stretch !important;gap:8px !important;margin:0 auto !important}
+.tile,.ron-related-tile,.video-tile{display:flex !important;flex-direction:column !important;border:1px solid #e3e5e8 !important;background:#fff !important;color:#222 !important;text-decoration:none !important;border-radius:7px !important;overflow:hidden !important;min-width:0 !important;margin:0 !important}
+.related-gallery>.tile,.ron-related-gallery>.tile,.ron-related-tile{flex:0 1 132px !important;width:132px !important;max-width:132px !important;border-color:#ded9d0 !important;border-radius:10px !important;box-shadow:0 2px 8px #0000000b !important}
+.cultural-large>.tile,.grid4>.tile,.grid6>.tile,.work-documentary>.tile{flex:0 1 110px !important;width:110px !important;max-width:110px !important}
+.cultural-compact>.tile{flex:0 1 90px !important;width:90px !important;max-width:90px !important}
+.tileimg,.ron-related-tile>a,.video-poster{background:#f6f6f6 !important;display:flex !important;align-items:center !important;justify-content:center !important;text-decoration:none !important;overflow:hidden !important}
+.tileimg{height:82px !important;padding:6px !important}
+.cultural-large .tileimg{height:79px !important}
+.cultural-compact .tileimg{height:71px !important}
+.related-gallery .tileimg,.ron-related-tile>a{height:96px !important;padding:6px !important}
+.video-gallery>.video-tile{width:133px !important;max-width:133px !important}
+.video-poster{position:relative !important;height:83px !important;padding:4px !important}
+.video-play{position:absolute !important;top:50% !important;left:50% !important;transform:translate(-50%,-50%) !important;display:flex !important;align-items:center !important;justify-content:center !important;width:32px !important;height:32px !important;border-radius:50% !important;background:rgba(20,20,20,.76) !important;color:#fff !important;font-size:19.7px !important;line-height:1 !important;pointer-events:none !important}
+.tileimg img,.ron-related-tile>a img,.video-poster img{display:block !important;max-width:100% !important;max-height:100% !important;width:auto !important;height:auto !important;object-fit:contain !important}
+.tilecaption,.ron-related-tile>figcaption,.video-tile figcaption{padding:6px 6px 8px !important;overflow-wrap:anywhere !important}
+.related-gallery .tilecaption,.ron-related-tile>figcaption,.video-tile figcaption{border-top:1px solid #ece9e3 !important}
+.tilename,.card-title,.ron-related-tile>figcaption a{display:block !important;font-size:13.9px !important;font-weight:650 !important;line-height:1.3 !important}
+.tilesub,.card-source,.card-detail-text{display:block !important;font-size:12.8px !important;line-height:1.3 !important;color:#687080 !important;margin-top:3px !important}
+.sequence{margin:16px auto 8px !important}
+footer,.site-footer,.ron-museum-v2-footer,.ron-published-footer-center{max-width:540px !important;margin:10px auto 0 !important;padding:12px 10px 0 !important;border-top:1px solid #e2e4e8 !important;color:#777 !important;font-size:15.1px !important;text-align:center !important}
+@media (max-width:580px){
+  .site-header{padding:10px 8px 0 !important}
+  .wrapper{padding:0 8px 16px !important}
+  .hero,.panel{padding:16px 10px !important}
+  .mainpainting,.painting-mat .mainpainting{max-height:310px !important}
+}
+
+
+/* RON-2020S-JS-APPROVED-V5-GUARDED-V1 END */
 </style></head><body><div class="wrapper">
 <!-- Catalogue navigation: replace decade links only if official structure changes -->
 <nav class="topnav"><a class="pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue home</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1970s/paintings/1970s.html">1960s–1970s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1980s/paintings/1980s.html">1980s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-1990s/paintings/1990s.html">1990s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-2000s/paintings/2000s.html">2000s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-2010s/paintings/2010s.html">2010s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-paintings-2020s/paintings/2020s.html">2020s</a><a class="pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a></nav>
